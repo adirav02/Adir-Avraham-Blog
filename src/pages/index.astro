@@ -1,16 +1,15 @@
 ---
+import Hero from "../components/landing-page/Hero.astro"
+import ArticlesSection from "../components/landing-page/ArticlesSection.astro"
+import BigCTA from "../components/BigCTA.astro"
+import BaseLayout from "../layouts/BaseLayout.astro"
 
+const title = "Hi, I'm Adir Avraham";
+const description = "Description"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={title} description={description}>
+    <Hero/>
+    <ArticlesSection/>
+    <BigCTA/>
+<BaseLayout/>

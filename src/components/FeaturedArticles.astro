@@ -1,0 +1,37 @@
+---
+import ArticleCard from "./ArticleCard.astro";
+const {heading} = Astro.props;
+
+// To be replaced
+const articles = [
+  {
+    title: "Featured Article 1",
+    img: "img/meals/meal-1.jpg",
+    alt: "Japanese Gyozas",
+    description: "Description about this article one sentence."
+  },
+  {
+    // Add data for the second article here
+    title: "Featured Article 2",
+    img: "img/path/to/image2.jpg", // Replace with actual image path
+    alt: "Description of image 2",
+    description: "Another captivating description for article 2."
+  },
+  {
+    // Add data for the third article here
+    title: "Featured Article 3",
+    img: "img/path/to/image3.jpg", // Replace with actual image path
+    alt: "Description of image 3",
+    description: "A compelling description to entice readers about article 3."
+  }
+];
+---
+
+<div class="container">
+    <span class="article-latest-subheading margin-bttom-md">{heading}</span>
+    <div class="container grid grid--3-cols grid--center-v">
+      {
+        articles.map((article) =>{ <ArticleCard title={article.title} description={article.description} img={article.img} alt={article.alt}/> })
+      }
+    </div>
+</div>

@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import circledLogoBlue from '../images/circledLogoBlue.png';
+---
+
+
+<footer class="footer">
+      
+    <!-- Bottom Navigation -->
+    <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <Image src={circledLogoBlue} alt='Adir Avraham Logo'/>
+          </a>
+        </div>
+
+        <nav class="nav-col">
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Articles</a></li>
+            <li><a class="footer-link" href="tools.html">Tools</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Copyright And Disclamer-->
+
+      <div class="container">
+        <p class="copyright">
+          Copyright &copy; <span class="year">2027</span> Adir Avraham. All
+          rights reserved.
+        </p>
+        <p class="disclaimer">
+          The information presented on this site shall not be construed as
+          medical advice. You should always consult with your physician for
+          medical advice in order to make sound medical decisions. The
+          information presented on this site is not intended to replace the
+          counsel of your physician. Do not alter anything in your treatment
+          plan based upon the information on this site; always consult with your
+          physician.
+        </p>
+      </div>
+</footer>
