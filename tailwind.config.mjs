@@ -14,6 +14,9 @@ export default {
         md: "704px",
         sm: "544px",
       },
+      outline: {
+        blue: "2px dotted #4263eb",
+      },
     },
   },
   plugins: [],
