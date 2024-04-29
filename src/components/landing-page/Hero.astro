@@ -1,49 +1,32 @@
 ---
+import { Image } from 'astro:assets';
+import HeadingPrimary from "../headings/HeadingPrimary.astro";
+import HeroDescription from "./HeroDescription.astro";
+import HeroCTAForm from "./HeroCTAForm.astro";
 
+import circledLogoBlue from '../../images/circledLogoBlue.png';
+
+const heroDescription = `Welcome to my corner of the web! I write about decoding health, hacking fitness, and exploring the world of code.`;
+const heroCTAText = "Sign up for my newsletter and get actionable fitness hacks andcode tips delivered weekly!";
+const headingText = "Hi, I'm Adir Avraham"
 ---
 
 
-<section class="section-hero">
-        <div class="hero">
-          <div class="hero-text-box">
-            <h1 class="heading-primary">Hi, I'm Adir Avraham</h1>
+<section class="pt-6 pb-16 bg-white sm:pt-12 sm:pb-24">
+        <div class="container mx-auto px-8 grid grid-cols-1 items-center gap-16 lg:px-20 lg:grid-cols-2 xl:gap-12 2xl:px-8 2xl:gap-24">
+          <div class="text-center lg:text-start">
+            <HeadingPrimary text={headingText}/>
             <!-- TODO: Write clear despcription -->
-            <p class="hero-description">
-              Welcome to my corner of the web! I
-              <a href="articles/articles.html">write</a> about decoding health,
-              hacking fitness, and exploring the world of code.
-            </p>
-
-            <!-- TODO: Subscribe to newsletter form -->
-            <p class="hero-description">
-              Sign up for my newsletter and get actionable fitness hacks and
-              code tips delivered weekly!
-            </p>
-            <form class="cta-form" name="sign-up">
-              <div>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="Your Email Address"
-                  name="email"
-                  required
-                />
-              </div>
-
-              <button class="btn btn--form btn-hero-cta">Subscribe</button>
-            </form>
+            <HeroDescription text={heroDescription}/>
+            <!-- CTA -->
+            <HeroDescription text={heroCTAText}/>
+            
+            <HeroCTAForm />
           </div>
-          <div class="hero-img-box">
+
+          <div class="text-center lg:text-start">
             <!-- TODO: Change Image -->
-            <picture>
-              <source srcset="img/hero.webp" type="image/webp" />
-              <source srcset="img/hero-min.png" type="image/png" />
-              <img
-                src="img/hero-min.png"
-                class="hero-img"
-                alt="Woman enjoying food, articles in storage container, and food bowls on a table"
-              />
-            </picture>
+            <Image src={circledLogoBlue} alt='A picture of me' class:list={"w-4/5 sm:w-3/5 lg:w-full lg:max-h-1/2"}/>
           </div>
         </div>
-      </section>
+</section>

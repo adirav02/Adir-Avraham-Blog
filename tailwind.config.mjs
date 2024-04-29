@@ -17,6 +17,13 @@ export default {
       outline: {
         blue: "2px dotted #4263eb",
       },
+      fontSize: {
+        "p-heading": "3.25rem", // equivalent to 52px
+        "p-heading-sm": "2.75rem", // equivalent to 52px
+      },
+      maxHeight: {
+        "1/2": "50%",
+      },
     },
   },
   plugins: [],
