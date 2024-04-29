@@ -1,0 +1,11 @@
+---
+
+const {name, url, cta=false} = Astro.props;
+const regularLinkClass = " text-gray-700 hover:text-blue-600";
+const ctaLinkClass = "py-5 px-6 rounded-sm text-white bg-blue-600 hover:bg-blue-800";
+
+---
+
+<li>
+    <a class=`text-3xl font-medium inline-block transition-all duration-300 lg:text-lg ${!cta ? regularLinkClass : ctaLinkClass}` href={url}>{name}</a>
+</li>

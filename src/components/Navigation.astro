@@ -1,19 +1,13 @@
 ---
-
+import NavigationItem from "./landing-page/navigation/NavigationItem.astro"
 ---
 
-<nav class="main-nav">
-        <ul class="main-nav-list">
-          <li>
-            <a class="main-nav-link" href="articles.html">Articles</a>
-          </li>
-          <li>
-            <a class="main-nav-link" href="tools.html">Tools</a>
-          </li>
-          <li>
-            <a class="main-nav-link nav-cta" href="newsletter.html"
-              >Free Workout Log</a
-            >
-          </li>
+<nav class="hidden lg:block">
+        <ul class="flex flex-col gap-12 items-center list-none lg:gap-8 lg:flex-row">
+          
+          <NavigationItem name="Articles" url=""/>
+          <NavigationItem name="Tools" url=""/>
+          <NavigationItem name="Free Workout Log" url="" cta={true}/>
         </ul>
 </nav>
+

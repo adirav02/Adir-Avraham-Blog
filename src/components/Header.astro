@@ -3,12 +3,10 @@ import Navigation from "./Navigation.astro";
 import MobileNavButton from "./MobileNavButton.astro";
 ---
 
-<header>
-    <Navigation/>
-
-    <a href="index.html">
+<header class="flex justify-between items-center bg-white h-24 px-12 relative lg:px-8">
+  <a class="font-serif uppercase text-2xl font-semibold tracking-wider transition-all duration-300 hover:text-blue-600" href="index.html" >
         Adir Avraham
     </a>
-
+    <Navigation/>
     <MobileNavButton />
 </header>
