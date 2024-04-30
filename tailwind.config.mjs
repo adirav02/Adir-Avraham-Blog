@@ -25,6 +25,10 @@ export default {
         "1/2": "50%",
       },
     },
+    letterSpacing: {
+      heading: "-0.5px",
+      subheading: "0.75px",
+    },
   },
   plugins: [],
 };

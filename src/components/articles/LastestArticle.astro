@@ -1,0 +1,24 @@
+---
+
+const {title, description, img, alt} = Astro.props;
+const subheading = "Latest";
+
+---
+
+
+<div>
+            <img
+              src={img}
+              alt={alt}
+              class=" w-9/12 rounded-sm overflow-hidden mb-3"
+            />
+
+            <div>
+              <span class="article-latest-subheading">{subheading}</span>
+              <p class="article-latest-title">
+                <a href="blogpost.html">{title}</a>
+              </p>
+              <p class="article-latest-description">{description}</p>
+            </div>
+</div>
+

@@ -1,47 +1,51 @@
 ---
-import FeaturedArticles from "../FeaturedArticles.astro"
+import FeaturedArticles from "../articles/FeaturedArticles.astro";
+import HeadingSecondary from "../headings/HeadingSecondary.astro";
+import HeadingTertiary from "../headings/HeadingTertiary.astro";
+import LatestArticle from "../articles/LastestArticle.astro";
+import Paragraph from "../Paragraph.astro";
+import ButtonOutline from "../ButtonOutline.astro";
+
+const mainHeading = "A Glimpse into My Thoughts";
+const tertialyHeading = "Articles";
+const articlesDescription="Most of my articles are about fitness, programming, and navigating the ever-evolving digital landscape. They're a blend of experimentation, exploration, and practical advice – a record of my journey to optimize health, conquer coding challenges, and make sense of the intersection of these fields.";
+
+const btnOutlineText = "All Articles";
+const btnOutlineURL = "#";
+
+const lastestArticle = {
+  title: "How I Improved My Bench", 
+  description: "My journey to a stronger bench press: Tips to finally break through.", 
+  img: "https://images.pexels.com/photos/14838102/pexels-photo-14838102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
+  alt: "Latest Article Image"
+}
 ---
 
-  <section class="section-how" id="how">
-        <div class="container center-text">
-          <h2 class="heading-secondary">A Glimpse into My Thoughts</h2>
+  <section class="py-24" id="how">
+        <div class="container mx-auto text-center">
+          <HeadingSecondary text={mainHeading}/>          
         </div>
 
-        <div class="container articles-grid grid--center-v">
-          <div>
-            <img
-              src="https://images.pexels.com/photos/14838102/pexels-photo-14838102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Latest Article"
-              class="articles-latest-img"
-            />
-
-            <div>
-              <span class="article-latest-subheading">Latest</span>
-              <p class="article-latest-title">
-                <a href="blogpost.html">How I Improved My Bench</a>
-              </p>
-              <p class="article-latest-description">
-                My journey to a stronger bench press: Tips to finally break
-                through.
-              </p>
-            </div>
-          </div>
+        <div class="container mx-auto px-8 mb-24 grid grid-cols-1 text-center  gap-x-16 gap-y-24 items-start md:grid-cols-2 md:text-start lg:px-20">
+          
+          <LatestArticle title={lastestArticle.title}, description={lastestArticle.description}, img={lastestArticle.img}, alt={lastestArticle.alt}/>
 
           <div>
-            <h2 class="heading-tertiary">Articles</h2>
-            <p class="article-description margin-bottom-md">
-              Most of my articles are about fitness, programming, and navigating
-              the ever-evolving digital landscape. They're a blend of
-              experimentation, exploration, and practical advice – a record of
-              my journey to optimize health, conquer coding challenges, and make
-              sense of the intersection of these fields.
-            </p>
-            <a href="#cta" class="btn btn--outline margin-right-sm"
-              >All Articles</a
-            >
+            <HeadingTertiary text={tertialyHeading}/>
+            <Paragraph text={articlesDescription} additionalClasses={"mb-5"}/>
+            
+            <ButtonOutline text={btnOutlineText} link={true} url={btnOutlineURL} additionalClasses={"mt-10"}/>
+
           </div>
         </div>
         
         <FeaturedArticles/>
 
       </section>
+
+      <!-- 
+
+.articles-grid {
+
+}
+       -->

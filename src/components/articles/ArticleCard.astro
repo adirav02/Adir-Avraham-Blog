@@ -1,0 +1,61 @@
+---
+const {title, description, img, alt, url="#"} = Astro.props;
+---
+
+
+<!-- Image -->
+<div class="h-9 rounded-sm overflow-hidden lg:h-14">
+    <a href={url}>
+        <img
+            src={img}
+            class="w-full"
+            alt={alt}
+        />
+    </a>
+<!-- Content -->
+    <div class=" py-6 items-start">
+        <p class=" font-serif mb-3">
+            <a href="#"
+                class=" text-blue-600 font-normal text-3xl tracking-heading hover:underline"
+                > 
+                    {title}
+            </a>
+        </p>
+        <p class="article-description">{description}</p>
+    </div>
+</div>
+
+<!-- 
+
+
+    up to 944px kg
+
+.article-title {
+  font-family: Prata, Rubik, sans-serif;
+  margin-bottom: 1.2rem;
+}
+
+.article-title a {
+  color: #4263eb;
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  font-size: 3.2rem;
+}
+
+.article-title a:hover,
+.article-title a:active {
+  text-decoration: underline;
+}
+
+.article-description {
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+
+.article-img {
+  width: 100%;
+}
+
+ -->
