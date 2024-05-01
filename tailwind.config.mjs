@@ -19,7 +19,8 @@ export default {
       },
       fontSize: {
         "p-heading": "3.25rem", // equivalent to 52px
-        "p-heading-sm": "2.75rem", // equivalent to 52px
+        "p-heading-sm": "2.75rem",
+        "32px": "2rem",
       },
       maxHeight: {
         "1/2": "50%",
@@ -28,6 +29,9 @@ export default {
     letterSpacing: {
       heading: "-0.5px",
       subheading: "0.75px",
+    },
+    maxWidth: {
+      "3/4": "75%",
     },
   },
   plugins: [],

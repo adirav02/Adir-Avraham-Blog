@@ -31,7 +31,7 @@ const articles = [
 
 <div class="container mx-auto px-8">
     <Subheading text={heading}/>
-    <div class="container grid grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-2 lg:grid-cols-3 xl:gap-y-16 xl:gap-x-24">
+    <div class=" px-4 grid grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-2 lg:grid-cols-3 xl:gap-y-16 xl:gap-x-24">
       {
         articles.map((article) => { 
           return <ArticleCard title={article.title} description={article.description} img={article.img} alt={article.alt}/> 
@@ -39,23 +39,3 @@ const articles = [
       }
     </div>
 </div>
-
-<!-- 
-grid--center-v
-
- column-gap: 4.8rem;
-    row-gap: 6.4rem;
-
-BELOW xl
-
-
-@media (max-width: 44em) {
-  .grid--3-cols,
-  .grid--4-cols {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-
-    column-gap: 6.4rem;
-  row-gap: 9.6rem;
- -->

@@ -1,24 +1,29 @@
 ---
-
+import Subheading from "../headings/Subheading.astro";
+import Paragraph from "./../Paragraph.astro";
 const {title, description, img, alt} = Astro.props;
 const subheading = "Latest";
 
 ---
 
 
-<div>
+<div class="flex flex-col items-center md:items-start">
             <img
               src={img}
               alt={alt}
               class=" w-9/12 rounded-sm overflow-hidden mb-3"
             />
 
-            <div>
-              <span class="article-latest-subheading">{subheading}</span>
-              <p class="article-latest-title">
-                <a href="blogpost.html">{title}</a>
+            <div class=" max-w-3/4">
+              <Subheading text={subheading} />
+
+              <p class=" font-serif mb-3">
+                <a
+                  class="text-blue-600 font-normal text-32px leading-tight tracking-heading hover:underline" 
+                  href="blogpost.html">{title}</a>
               </p>
-              <p class="article-latest-description">{description}</p>
+              <Paragraph text={description}>
+              
             </div>
 </div>
 
