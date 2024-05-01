@@ -1,0 +1,30 @@
+---
+import HeadingCTA from "./headings/HeadingCTA.astro";
+import DescriptionCTA from './text/DescriptionCTA.astro';
+import FormCTAFull from './forms/FormCTAFull.astro';
+
+const headingRegularText = "Supercharge Your Fitness Journey - ";
+const headingMarkedText = "Get Your Free Workout Log";
+const descriptionRegularText ="Download a free Excel workout log and meticulously track every set, rep, and weight and ";
+const descriptionMarkedText ="fuel your motivation, strategize your plan so that each workout helps you surpass your previous bests";
+const submitBtnText ="Get The Workout Log"
+---
+
+<section class=" py-12 px-6 bg-zinc-100" id="cta">
+        <div class=" container mx-auto px-6">
+          <div class=" grid grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-9">
+            
+            <!-- CTA Text Box -->
+            <div class="p-8 text-center md:text-start sm:p-0">
+
+              <HeadingCTA regularText={headingRegularText} markedText={headingMarkedText} />
+              
+              <DescriptionCTA regularText={descriptionRegularText} markedText={descriptionMarkedText}/>
+
+            </div>
+
+            <!-- CTA FORM -->
+            <FormCTAFull btnText={submitBtnText}/>
+          </div>
+        </div>
+</section>

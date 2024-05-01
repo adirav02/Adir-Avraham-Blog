@@ -32,6 +32,7 @@ export default {
     },
     maxWidth: {
       "3/4": "75%",
+      96: "24rem",
     },
   },
   plugins: [],

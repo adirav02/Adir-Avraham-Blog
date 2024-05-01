@@ -1,0 +1,10 @@
+---
+const {regularText, markedText =""} = Astro.props;
+---
+
+<p class="text-xl leading-relaxed text-neutral-600">
+    {regularText}
+    <span class=" font-bold text-neutral-600">
+        {markedText}
+    </span>
+</p>
