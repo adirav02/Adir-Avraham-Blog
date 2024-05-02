@@ -1,13 +1,17 @@
 ---
 import NavigationItem from "./NavigationItem.astro";
+import MobileNavButton from "./MobileNavButton.astro";
 ---
 
-<nav class="hidden lg:block">
-        <ul class="flex flex-col gap-12 items-center list-none lg:gap-8 lg:flex-row">
-          
-          <NavigationItem name="Articles" url=""/>
-          <NavigationItem name="Tools" url=""/>
-          <NavigationItem name="Free Workout Log" url="" cta={true}/>
-        </ul>
+<nav class="fixed h-[100vh] top-0 left-0 w-full bg-neutral-200 hidden pt-28 transition-all lg:pt-0 lg:bg-transparent lg:w-auto lg:block lg:static lg:top-auto lg:left-auto lg:h-auto" id="main-nav">
+  <ul class="flex flex-col gap-12 items-center list-none lg:gap-8 lg:flex-row">
+    <NavigationItem name="Articles" url="/articles/"/>
+    <NavigationItem name="Tools" url="/tools/"/>
+    <NavigationItem name="Free Workout Log" url="/newsletter/" cta={true}/>
+  </ul>        
+
+  <script>
+    import "../../scripts/menu.js";
+  </script>
 </nav>
 

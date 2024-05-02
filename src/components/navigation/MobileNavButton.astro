@@ -2,16 +2,15 @@
 ---
 
 <button class="block z-50 lg:hidden">
-    <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-    <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+
+<!-- Menu -->
+<ion-icon class="icon-mobile-nav text-3xl" name="menu-outline" id="main-nav-hamburger"></ion-icon>
+
+<!-- Close -->
+<ion-icon class="icon-mobile-nav hidden text-3xl" name="close-outline" id="main-nav-close"></ion-icon>
+
+    <script>
+        import "../../scripts/menu.js";
+    </script>
 </button>
 
-<script>
-    document.querySelector('menu-outline').addEventListener('click', (event) =>{
-
-    });
-
-    document.querySelector('close-outline').addEventListener('click', (event) =>{
-
-    });
-</script>
