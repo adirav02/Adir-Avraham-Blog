@@ -1,0 +1,53 @@
+---
+import TopSection from "../components/page/TopSection.astro";
+import BaseLayout from "../layouts/BaseLayout.astro"
+import circledLogoBlue from '../images/circledLogoBlue.png';
+import HeadingSecondary from "../components/headings/HeadingSecondary.astro";
+import Paragraph from "../components/Paragraph.astro";
+import ListItem from "../components/text/ListItem.astro";
+import FormCTAFull from "../components/forms/FormCTAFull.astro";
+
+const title = "Subscribe";
+const description = "Description";
+
+const headline = "Unlock Your Fitness Potential: Subscribe & Get a Free Workout Log";
+const bodyText = "Ready to crush your fitness goals?  Join our fitness community and receive exclusive content, expert tips, and workout inspiration delivered straight to your inbox!  Plus, as a welcome gift, you'll get a FREE downloadable, one-year workout log to track your progress and celebrate your achievements!";
+const imageAlt = "Logo";
+const contentHeading ="Why Subscribe?";
+const content = "In addition to receiving your free one-year workout log, subscribing to our newsletter unlocks a treasure trove of valuable resources to fuel your fitness journey.  Here are some of the benefits you'll enjoy:";
+
+const benefits = ["Exclusive workout routines and challenges", "Expert training tips and advice", "Healthy recipes and nutrition guidance", "Motivational articles"];
+const benefitIcon = "checkmark-sharp";
+
+---
+
+<BaseLayout title={title} description={description}>
+    
+    <TopSection headline={headline}, description={bodyText}, image={circledLogoBlue}, imageAlt={imageAlt}/>
+    
+    <section class="pb-24">
+        <div class="container mx-auto text-center">
+            <HeadingSecondary text={contentHeading}/>
+        </div>
+
+        <div class="container mx-auto px-8 mb-24 grid grid-cols-1 text-center  gap-x-16 gap-y-8  items-start md:gap-y-24 md:grid-cols-2 md:text-start md:items-center">
+            <div>
+                <Paragraph text={content} />
+                <ul class=" py-8 text-start flex flex-col justify-center">
+                    {
+                        benefits.map(benefit =>{
+                            return <ListItem text={benefit} icon={benefitIcon}/>
+                        })
+                    }
+                </ul>
+            </div>
+            <FormCTAFull/>
+        </div>
+    </section>
+</BaseLayout>
+<!-- 
+
+
+
+<ion-icon name="checkmark-sharp"></ion-icon>
+ -->
