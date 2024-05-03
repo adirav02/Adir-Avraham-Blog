@@ -1,0 +1,53 @@
+---
+import Hero from "../components/landing-page/Hero.astro"
+import ArticlesSection from "../components/landing-page/ArticlesSection.astro"
+import BaseLayout from "../layouts/BaseLayout.astro"
+import WatermarkText from "../components/text/WatermarkText.astro";
+import HeadingSecondary from "../components/headings/HeadingSecondary.astro";
+import Paragraph from "../components/Paragraph.astro";
+import NavigationButton from "../components/navigation/NavigationButton.astro";
+
+const title = "404";
+const description = "Oops! We couldn't find that page.";
+const suggestion = "Maybe you can find what you need here?";
+
+// Navigation
+const navButtons = [{
+        text: "Articles",
+        url: "/articles/",
+        color: "blue"
+    },
+    {
+        text: "Tools",
+        url: "/tools/",
+        color: "blue"
+    }
+]
+
+---
+
+<BaseLayout title={title} description={description}>
+
+    <!-- Page Top -->
+    <section class="pt-6 pb-16 bg-white sm:pt-12 sm:pb-24">
+        <div class="container mx-auto px-8 grid grid-cols-1 items-center text-center gap-16 lg:px-20 ">
+            <!-- Watermark  -->
+            <WatermarkText text={title} />
+            <h2 class="text-5xl -mb-6  -mt-10 font-extrabold text-gray-800 leading-tight tracking-heading">
+                {description}
+            </h2>
+            <p class="text-2xl leading-snug">
+                {suggestion}
+            </p>
+            <div class="flex justify-center gap-4 -mt-6">
+                {
+                    navButtons.map(link => {
+                        return <NavigationButton text={link.text} url={link.url} color={link.color} />
+                    })
+                }
+            </div>
+        </div>
+        
+    </section>
+
+</BaseLayout>

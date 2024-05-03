@@ -1,0 +1,8 @@
+---
+const {url, text, color} = Astro.props;
+---
+
+<a class={`px-4 py-3 bg-${color}-600 text-white rounded-3xl cursor-pointer text-xl transition-all duration-300 hover:bg-${color}-700`}
+   href={url}>
+    {text}
+</a>
