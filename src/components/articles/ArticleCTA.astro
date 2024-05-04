@@ -1,0 +1,17 @@
+---
+import Paragraph from "../Paragraph.astro";
+
+const title = "Supercharge Your Fitness Journey";
+const description = "Download a free Excel workout log and meticulously track every set, rep, and weight and fuel your motivation, strategize your plan so that each workout helps you surpass your previous bests";
+const newsletterURL = "/newsletter/";
+---
+
+
+
+<div class="px-6 py-8 my-12 mx-auto flex flex-col gap-8 bg-blue-100 rounded-sm max-w-500 lg:my-16">
+    <h2 class="text-4xl font-bold text-gray-800 leading-tight tracking-heading xl:text-p-heading-sm">{title}</h2>   
+    <Paragraph text={description} />
+    <a href={newsletterURL} class="mx-auto p-3 text-xl w-3/5 bg-blue-600 text-white  border border-solid border-blue-600 transition-all duration-300 rounded-sm lg:mt-0 lg:self-end hover:bg-blue-700"
+        >Continue
+    </a>
+</div>

@@ -26,6 +26,10 @@ export default {
       maxHeight: {
         "1/2": "50%",
       },
+      maxWidth: {
+        article: "850px",
+        500: "500px",
+      },
     },
     letterSpacing: {
       wider: "0.05em",
@@ -38,5 +42,5 @@ export default {
       96: "24rem",
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

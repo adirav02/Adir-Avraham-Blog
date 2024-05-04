@@ -128,6 +128,7 @@ You can do as many circuits as you would like, and rest for 1 minute when comple
 | Crunch Twist          | 10       |
 
 \*Reps Per side
+
 \*\*This is YOUR workout! Adjust the reps to fit your fitness level
 
 # Additional Tips 
