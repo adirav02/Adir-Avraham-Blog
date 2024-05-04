@@ -1,0 +1,12 @@
+---
+import FullCTA from "../components/FullCTA.astro";
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+  <div class="content-wrapper">
+    <slot />
+  </div>
+  <FullCTA />
+</BaseLayout>

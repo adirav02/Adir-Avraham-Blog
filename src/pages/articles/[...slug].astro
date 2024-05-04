@@ -1,0 +1,59 @@
+---
+import { getCollection } from "astro:content";
+import MarkdownWrapper from "../../layouts/MarkdownWrapper.astro";
+import type { CollectionEntry } from "astro:content";
+import { getEntries } from "astro:content";
+import HeadingPrimary from "../../components/headings/HeadingPrimary.astro";
+import Subheading from "../../components/headings/Subheading.astro";
+import ArticleCard from "../../components/articles/ArticleCard.astro";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("posts");
+    return posts.map((entry) =>({
+        params: {slug: entry.slug},
+        props: {entry}
+    }));
+}
+
+type Props = {
+    entry: CollectionEntry<"posts">;
+}
+
+const {entry} = Astro.props;
+const {Content} = await entry.render();
+const relatedPosts = entry.data.relatedPosts ? await getEntries(entry.data.relatedPosts) : [];
+---
+
+<MarkdownWrapper frontmatter={entry.data}>
+    <div class="post-top">
+        <HeadingPrimary text={entry.data.title} />
+        <p>{entry.data.author}</p>
+        <time datetime={entry.data.pubDate.toISOString()}>
+        {
+            entry.data.pubDate.toLocaleDateString(undefined, {
+            dateStyle: "medium",
+            timeZone: "UTC",
+            })
+        }
+      </time>
+        <img src={entry.data.image.src} alt={entry.data.image.alt} />
+    </div>
+
+    <Content />
+    {
+        relatedPosts.length > 0 && (
+            <div>
+                <Subheading text={"Related Articles"}/>
+                <div class="container mx-auto px-8">
+                    <div class="px-4 grid grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-2 lg:grid-cols-3 xl:gap-y-16 xl:gap-x-24">
+                        {
+                        relatedPosts.map( (p) => (
+                            <ArticleCard post={p} />
+                        ))
+                        }
+                    </div>                    
+                </div>
+            </div>
+        )
+    }
+</MarkdownWrapper>

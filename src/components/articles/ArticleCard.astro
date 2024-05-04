@@ -1,5 +1,14 @@
 ---
-const {title, description, img, alt, url="#"} = Astro.props;
+import type { CollectionEntry } from "astro:content";
+import { getEntry } from "astro:content";
+
+type Props = {
+    post: CollectionEntry<"posts">;
+};
+
+const {post} = Astro.props;
+const {author, description, title, image} = post.data
+const url = `/articles/${post.slug}`;
 ---
 
 
@@ -7,16 +16,16 @@ const {title, description, img, alt, url="#"} = Astro.props;
   <div class=" h-60 sm:h-72 md:h-48 lg:h-52">
     <a href={url}>
         <img
-            src={img}
+            src={image.src}
             class="w-full h-full object-cover"
-            alt={alt}
+            alt={image.alt}
         />
     </a>
   </div>
     <!-- Content -->
     <div class="py-6 text-center md:text-start">
         <p class="font-serif mb-3">
-            <a href="#"
+            <a href={url}
                 class="text-blue-600 font-normal text-3xl tracking-heading hover:underline"
             >
                 {title}
