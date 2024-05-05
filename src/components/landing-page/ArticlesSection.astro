@@ -5,37 +5,35 @@ import HeadingTertiary from "../headings/HeadingTertiary.astro";
 import LatestArticle from "../articles/LastestArticle.astro";
 import Paragraph from "../Paragraph.astro";
 import ButtonOutline from "../ButtonOutline.astro";
+import { getEntry } from "astro:content";
+
 
 const mainHeading = "A Glimpse into My Thoughts";
 const tertialyHeading = "Articles";
 const articlesDescription="Most of my articles are about fitness, programming, and navigating the ever-evolving digital landscape. They're a blend of experimentation, exploration, and practical advice – a record of my journey to optimize health, conquer coding challenges, and make sense of the intersection of these fields.";
 
 const btnOutlineText = "All Articles";
-const btnOutlineURL = "#";
+const articlesPageURL = "/articles/";
 
-const lastestArticle = {
-  title: "How I Improved My Bench", 
-  description: "My journey to a stronger bench press: Tips to finally break through.", 
-  img: "https://images.pexels.com/photos/14838102/pexels-photo-14838102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
-  alt: "Latest Article Image"
-}
+const latestArticle = await getEntry('posts','is-all-this-cardio-really-necessary-for-fat-loss');
 ---
 
   <section class="py-24">
-        <div class="container mx-auto text-center">
+        
+    <div class="container mx-auto text-center">
           <HeadingSecondary text={mainHeading}/>          
         </div>
 
         <div class="container mx-auto px-8 mb-24 grid grid-cols-1 text-center  gap-x-16 gap-y-24 items-start md:grid-cols-2 md:text-start ">
           
-          <LatestArticle title={lastestArticle.title}, description={lastestArticle.description}, img={lastestArticle.img}, alt={lastestArticle.alt}/>
+          <LatestArticle post={latestArticle}/>
 
           <div class="flex flex-col justify-between">
             <HeadingTertiary text={tertialyHeading}/>
             <Paragraph text={articlesDescription} additionalClasses={"mb-5"}/>
-          <div class="self-center  mt-8 md:mt-5 md:self-start">
-            <ButtonOutline text={btnOutlineText} link={true} url={btnOutlineURL}/>
-          </div>
+            <div class="self-center  mt-8 md:mt-5 md:self-start">
+              <ButtonOutline text={btnOutlineText} link={true} url={articlesPageURL}/>
+            </div>
           </div>
         </div>
 

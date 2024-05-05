@@ -2,6 +2,7 @@
 import ArticleCard from "./ArticleCard.astro";
 import Subheading from "../headings/Subheading.astro";
 import { getEntry } from "astro:content";
+import ArticlesGroup from "./ArticlesGroup.astro";
 
 const heading = "Featured";
 
@@ -14,11 +15,5 @@ const featuredArticles = [featured1, featured2, featured3];
 
 <div class="container mx-auto px-8">
     <Subheading text={heading}/>
-    <div class=" px-4 grid grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-2 lg:grid-cols-3 xl:gap-y-16 xl:gap-x-24">
-      {
-        featuredArticles.map((post) => { 
-          return <ArticleCard post={post}/> 
-        })
-      }
-    </div>
+    <ArticlesGroup posts={featuredArticles}/>
 </div>

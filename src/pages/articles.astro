@@ -1,16 +1,26 @@
 ---
-import ArticlesSection from "../components/landing-page/ArticlesSection.astro"
 import BaseLayout from "../layouts/BaseLayout.astro"
 import FullCTA from "../components/FullCTA.astro";
+import { getCollection } from "astro:content";
+import HeadingPrimary from "../components/headings/HeadingPrimary.astro";
+import ArticlesGroup from "../components/articles/ArticlesGroup.astro";
 
 const title = "Articles - Adir Avraham";
-const description = "Description"
+const description = "Description";
+const heading = "Articles";
+
+const posts = await getCollection('posts');
 ---
 
 <BaseLayout title={title} description={description}>
     
-
-    <ArticlesSection/>
+    <div class="container mx-auto text-center">
+        <HeadingPrimary text={heading} />
+    </div>
+    
+    <section class="container mx-auto text-center">
+        <ArticlesGroup posts={posts} />
+    </section>
    
     <FullCTA />
 
