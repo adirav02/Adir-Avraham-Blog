@@ -11,7 +11,6 @@ const EmailSignupForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setIsSubmitting(true);
-    console.log(lowCaseEmail);
     try {
       const res = await fetch("/api/sendEmail.json", {
         method: "POST",
