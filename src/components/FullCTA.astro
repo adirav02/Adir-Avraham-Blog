@@ -1,13 +1,12 @@
 ---
 import HeadingCTA from "./headings/HeadingCTA.astro";
 import DescriptionCTA from './text/DescriptionCTA.astro';
-import FormCTAFull from './forms/FormCTAFull.astro';
-
+// import FormCTAFull from './forms/FormCTAFull.astro';
+import FormCTAFull from "./forms/FormCTAFull.jsx";
 const headingRegularText = "Supercharge Your Fitness Journey - ";
 const headingMarkedText = "Get Your Free Workout Log";
 const descriptionRegularText ="Download a free Excel workout log and meticulously track every set, rep, and weight and ";
 const descriptionMarkedText ="fuel your motivation, strategize your plan so that each workout helps you surpass your previous bests";
-const submitBtnText ="Get The Workout Log"
 ---
 
 <section class=" py-12 px-6 bg-zinc-100" id="cta">
@@ -24,7 +23,8 @@ const submitBtnText ="Get The Workout Log"
             </div>
 
             <!-- CTA FORM -->
-            <FormCTAFull btnText={submitBtnText}/>
+            <!-- <FormCTAFull btnText={submitBtnText}/> -->
+            <FormCTAFull btnText="Get the Workout Log" client:load/>
           </div>
         </div>
 </section>
