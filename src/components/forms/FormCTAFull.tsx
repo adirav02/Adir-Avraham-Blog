@@ -1,4 +1,6 @@
+import { render } from "@react-email/render";
 import React, { useState } from "react";
+import ConfirmationEmail from "../../emails/ConfirmationEmail";
 
 const InputForm = ({ btnText }) => {
   const [fullName, setFullName] = useState("");
@@ -14,9 +16,21 @@ const InputForm = ({ btnText }) => {
     }
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsSubmitting(true); // Set button to disabled state
+    const formData = new FormData(event.currentTarget);
+    const { email } = Object.fromEntries(formData);
+
+    const finalHtml = render(
+      <ConfirmationEmail userFirstname={fullName as string} />,
+      { pretty: true }
+    );
+
+    const finalText = render(
+      <ConfirmationEmail userFirstname={fullName as string} />,
+      { plainText: true }
+    );
 
     try {
       const res = await fetch("/api/sendEmail.json", {
@@ -27,9 +41,9 @@ const InputForm = ({ btnText }) => {
         body: JSON.stringify({
           from: "adir@adiravraham.com",
           to: email,
-          subject: "subject",
-          html: "<p>Hi<p>",
-          text: "Hi",
+          subject: `Hi ${fullName}!`,
+          html: finalHtml,
+          text: finalText,
         }),
       });
       const data = await res.json();

@@ -13,6 +13,8 @@
     "@astrojs/netlify": "^5.2.1",
     "@astrojs/react": "^3.3.4",
     "@astrojs/tailwind": "^5.1.0",
+    "@react-email/components": "0.0.17",
+    "@react-email/render": "0.0.13",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
     "astro": "^4.7.0",
