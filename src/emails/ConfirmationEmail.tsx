@@ -6,6 +6,7 @@ import {
   Hr,
   Html,
   Img,
+  Link,
   Preview,
   Section,
   Text,
@@ -22,36 +23,56 @@ export const ConfirmationEmail = ({
   <Html>
     <Head />
     <Preview>
-      The sales intelligence platform that helps you uncover qualified leads.
+      Get ready to level up your fitness journey! Dive into exclusive fitness
+      tips and killer workouts to crush your goals.
     </Preview>
     <Body style={main}>
       <Container style={container}>
         <Img
           src="src/images/circledLogoBlue.png"
-          width="170"
-          height="170"
-          alt="Adir"
+          width="150"
+          height="150"
+          alt="Logo"
           style={logo}
         />
-        <Text style={paragraph}>Hi {userFirstname},</Text>
         <Text style={paragraph}>
-          Welcome to Koala, the sales intelligence platform that helps you
-          uncover qualified leads and close deals faster.
+          Hi{userFirstname ? `! ${userFirstname}` : "!"}
+        </Text>
+        <Text style={paragraph}>
+          Thanks for joining my newsletter! I'm thrilled to have you on board.
+          In this newsletter, you'll receive exclusive fitness tips, workout
+          routines, healthy recipes, and much more to help you reach your
+          fitness goals.
+        </Text>
+        <Text style={paragraph}>
+          To ensure you receive all our updates and confirm your email address,
+          click the button below to download your FREE Workout Log!
         </Text>
         <Section style={btnContainer}>
+          {/* TODO: Link and Add to DataBase */}
           <Button style={button} href="https://getkoala.com">
-            Get started
+            Download Your Free Workout Log
           </Button>
         </Section>
         <Text style={paragraph}>
           Best,
           <br />
-          The Koala team
+          Adir Avraham
         </Text>
         <Hr style={hr} />
-        <Text style={footer}>
-          470 Noor Ave STE B #1148, South San Francisco, CA 94080
-        </Text>
+        <div className="flex items-center justify-start gap-5 pb-3">
+          <Img
+            src="src/images/circledLogoBlue.png"
+            width="75"
+            height="75"
+            alt="Adir"
+          />
+          <div className="flex flex-col">
+            <Text style={footerName}>Adir Avraham</Text>
+            <Link style={footerLink}>adir@adiravraham.com</Link>
+            <Link style={footerLink}>adiravraham.com</Link>
+          </div>
+        </div>
       </Container>
     </Body>
   </Html>
@@ -83,12 +104,24 @@ const paragraph = {
   lineHeight: "26px",
 };
 
+const footerName = {
+  fontWeight: "600",
+  fontSize: "18px",
+  marginBottom: "12px",
+};
+
+const footerLink = {
+  color: "#4263eb",
+  fontSize: "16px",
+  cursor: "pointer",
+};
+
 const btnContainer = {
   textAlign: "center" as const,
 };
 
 const button = {
-  backgroundColor: "#5F51E8",
+  backgroundColor: "#4263eb",
   borderRadius: "3px",
   color: "#fff",
   fontSize: "16px",
