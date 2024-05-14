@@ -7,8 +7,8 @@ export const POST: APIRoute = async ({ request }) => {
   const data = await request.json();
 
   try {
-    const { fullName, email } = data;
-    if (!fullName || !email) {
+    const { id, fullName, email } = data;
+    if (!id || fullName == undefined || !email) {
       return new Response(
         JSON.stringify({
           message: "Please povide all required fields",
@@ -20,6 +20,7 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
     const res = await db.insert(Newsletter).values({
+      id: id,
       fullName: fullName,
       email: email,
     });

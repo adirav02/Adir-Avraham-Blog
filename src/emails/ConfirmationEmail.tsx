@@ -36,7 +36,10 @@ export const ConfirmationEmail = ({
           style={logo}
         />
         <Text style={paragraph}>
-          Hi{userFirstname ? `! ${userFirstname}` : "!"}
+          Hi
+          {userFirstname && userFirstname.trim()
+            ? `! ${userFirstname.trim()}`
+            : "!"}
         </Text>
         <Text style={paragraph}>
           Thanks for joining my newsletter! I'm thrilled to have you on board.

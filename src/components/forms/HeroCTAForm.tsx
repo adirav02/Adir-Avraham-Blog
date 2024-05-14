@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ConfirmationEmail from "../../emails/ConfirmationEmail";
 import { render } from "@react-email/render";
+import { v4 as uuidv4 } from "uuid";
 
 const EmailSignupForm = () => {
   const [email, setEmail] = useState("");
@@ -15,7 +16,9 @@ const EmailSignupForm = () => {
     setIsSubmitting(true);
     const formData = new FormData(event.currentTarget);
     const { email } = Object.fromEntries(formData);
-    const fullName = "";
+    const fullName = " ";
+    const id = uuidv4();
+    console.log(id);
     const finalHtml = render(
       <ConfirmationEmail userFirstname={fullName as string} />,
       { pretty: true }
@@ -34,6 +37,7 @@ const EmailSignupForm = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          id,
           fullName,
           email,
         }),

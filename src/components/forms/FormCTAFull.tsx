@@ -1,6 +1,7 @@
 import { render } from "@react-email/render";
 import React, { useState } from "react";
 import ConfirmationEmail from "../../emails/ConfirmationEmail";
+import { v4 as uuidv4 } from "uuid";
 
 const InputForm = ({ btnText }) => {
   const [fullName, setFullName] = useState("");
@@ -21,6 +22,8 @@ const InputForm = ({ btnText }) => {
     setIsSubmitting(true); // Set button to disabled state
     const formData = new FormData(event.currentTarget);
     const { email } = Object.fromEntries(formData);
+    const id = uuidv4();
+    console.log(id);
 
     const finalHtml = render(
       <ConfirmationEmail userFirstname={fullName as string} />,
@@ -40,6 +43,7 @@ const InputForm = ({ btnText }) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          id,
           fullName,
           email,
         }),

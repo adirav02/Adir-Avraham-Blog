@@ -1,0 +1,31 @@
+---
+export const prerender = false;
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EmailSettings from "../../components/email-settings/EmailSettings.tsx";
+import HeadingPrimary from "../../components/headings/HeadingPrimary.astro";
+import { db } from "astro:db";
+import { Newsletter } from "astro:db";
+import { eq } from "astro:db";
+
+type Params = {
+    id: string
+};
+
+const { id } = Astro.params as Params;
+const user = await db.select().from(Newsletter).where(eq(Newsletter.id, id));
+
+try {
+  if (!user[0].id && !user[0].email && !user[0].fullName) {
+    return new Response("User not found", { status: 404 });
+  }
+} catch(e) {
+  return new Response("User not found", { status: 404 });
+}
+---
+
+<BaseLayout>
+    <div class="container mx-auto pt-6 pb-16 text-center bg-white sm:pt-12 sm:pb-24">
+        <HeadingPrimary text="Email Settings"/>
+    </div>
+     <EmailSettings id={user[0].id} email={user[0].email} currentFullName={user[0].fullName} client:load/>
+</BaseLayout>
