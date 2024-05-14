@@ -60,19 +60,23 @@ export const ConfirmationEmail = ({
           Adir Avraham
         </Text>
         <Hr style={hr} />
-        <div className="flex items-center justify-start gap-5 pb-3">
+        <Section style={footer}>
           <Img
             src="src/images/circledLogoBlue.png"
             width="75"
             height="75"
             alt="Adir"
+            style={logo}
           />
-          <div className="flex flex-col">
-            <Text style={footerName}>Adir Avraham</Text>
-            <Link style={footerLink}>adir@adiravraham.com</Link>
-            <Link style={footerLink}>adiravraham.com</Link>
-          </div>
-        </div>
+          <Text style={footerName}>Adir Avraham</Text>
+          <Link style={footerLink} href="mailto:adir@adiravraham.com">
+            Email
+          </Link>
+          ・{" "}
+          <Link style={footerLink} href="www.adiravraham.com">
+            Website
+          </Link>
+        </Section>
       </Container>
     </Body>
   </Html>
@@ -107,12 +111,12 @@ const paragraph = {
 const footerName = {
   fontWeight: "600",
   fontSize: "18px",
-  marginBottom: "12px",
+  margin: "0 0 12px 0",
 };
 
 const footerLink = {
   color: "#4263eb",
-  fontSize: "16px",
+  fontSize: "12px",
   cursor: "pointer",
 };
 
@@ -137,6 +141,5 @@ const hr = {
 };
 
 const footer = {
-  color: "#8898aa",
-  fontSize: "12px",
+  textAlign: "center" as const,
 };
