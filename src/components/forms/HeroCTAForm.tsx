@@ -26,6 +26,33 @@ const EmailSignupForm = () => {
       { plainText: true }
     );
 
+    // Add to db
+    try {
+      const res = await fetch("/api/addEmail.json", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullName,
+          email,
+        }),
+      });
+
+      const { success, data, message } = await res.json();
+      if (success) {
+        alert("Added to db");
+      } else {
+        throw new Error(message);
+      }
+    } catch (e) {
+      if (e instanceof Error) {
+        alert(e.message);
+      }
+      console.error(e);
+    }
+
+    // Send Email
     try {
       const res = await fetch("/api/sendEmail.json", {
         method: "POST",
