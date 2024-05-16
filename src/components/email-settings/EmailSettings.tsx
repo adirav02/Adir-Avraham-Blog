@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import UnsubscribePopup from "./UnsubscribePopup";
+import { navigate } from "astro:transitions/client";
 
 const EmailSettings = ({ id, email, currentFullName }) => {
   const [fullName, setFullName] = useState(currentFullName);
   const [isSubmitting, setIsSubmitting] = useState(false); // Track submission state
+  const [isPopupDisplayed, setIsPopupDisplayed] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -34,11 +37,14 @@ const EmailSettings = ({ id, email, currentFullName }) => {
           "Content-Type": "application/json",
         },
       });
-      alert("deleted");
+      navigate("/");
     } catch (e) {
       console.error(e);
     }
   };
+
+  const handleOpenPopup = () => setIsPopupDisplayed(true);
+  const handleClosePopup = () => setIsPopupDisplayed(false);
 
   return (
     <div className="px-6 flex flex-col gap-10 lg:max-w-96">
@@ -86,11 +92,17 @@ const EmailSettings = ({ id, email, currentFullName }) => {
       <div className="pb-10">
         <button
           className={`p-3 w-full text-xl bg-red-600 text-white border border-solid border-red-600 transition-all duration-300 rounded-sm lg:mt-0 lg:self-end hover:bg-red-700`}
-          onClick={handleUnsubscribe}
+          onClick={handleOpenPopup}
         >
           Unsubscribe
         </button>
       </div>
+      {isPopupDisplayed && (
+        <UnsubscribePopup
+          onClose={handleClosePopup}
+          onUnsubscribe={handleUnsubscribe}
+        />
+      )}
     </div>
   );
 };
