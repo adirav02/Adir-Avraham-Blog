@@ -6,7 +6,7 @@ const UnsubscribePopup = ({ onClose, onUnsubscribe }) => (
       onClose ? "opacity-100" : "opacity-0 pointer-events-none"
     }`}
   >
-    <div className="bg-white p-6 rounded-lg shadow-md">
+    <div className="bg-white p-6 rounded-sm shadow-md">
       <h3 className="mb-3 text-2xl font-bold text-gray-900">
         Important: Unsubscribing will permanently remove you from receiving
         updates.
