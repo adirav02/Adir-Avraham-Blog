@@ -3,12 +3,12 @@ import Image from "astro/components/Image.astro";
 import type { CollectionEntry } from "astro:content";
 
 type Props = {
-    post: CollectionEntry<"posts">;
+    post: CollectionEntry<"tools">;
 };
 
 const {post} = Astro.props;
-const {author, description, title, cover, coverAlt} = post.data
-const url = `/articles/${post.slug}`;
+const {description, title, cover, coverAlt} = post.data
+const url = `/tools/${post.slug}`;
 
 ---
 

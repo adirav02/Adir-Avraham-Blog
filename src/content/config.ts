@@ -11,10 +11,19 @@ const posts = defineCollection({
       author: z.string(),
       cover: image(),
       coverAlt: z.string(),
-      // image: z.object({
-      //   src: image(),
-      //   alt: z.string(),
-      // }),
+      tags: z.array(z.string()),
+      relatedPosts: z.array(reference("posts")),
+    }),
+});
+
+const tools = defineCollection({
+  type: "content",
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      cover: image(),
+      coverAlt: z.string(),
       tags: z.array(z.string()),
       relatedPosts: z.array(reference("posts")),
     }),
@@ -22,4 +31,5 @@ const posts = defineCollection({
 // Export a single `collections` object to register your collection(s)
 export const collections = {
   posts: posts,
+  tools: tools,
 };

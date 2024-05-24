@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import FullCTA from "../components/FullCTA.astro";
+import { getCollection } from "astro:content";
+import HeadingPrimary from "../components/headings/HeadingPrimary.astro";
+import ToolsGroup from "../components/tools/ToolsGroup.astro";
+
+const title = "Articles - Adir Avraham";
+const description = "Description";
+const heading = "Tools";
+
+const tools = await getCollection('tools');
+---
+
+<BaseLayout title={title} description={description}>
+    
+    <div class="container mx-auto text-center">
+        <HeadingPrimary text={heading} />
+    </div>
+    
+    <section class="container mx-auto text-center">
+        <ToolsGroup posts={tools} />
+    </section>
+   
+    <FullCTA />
+
+</BaseLayout>

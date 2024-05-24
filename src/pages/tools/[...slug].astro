@@ -1,0 +1,66 @@
+---
+import { getCollection } from "astro:content";
+import MarkdownWrapper from "../../layouts/MarkdownWrapper.astro";
+import type { CollectionEntry } from "astro:content";
+import { getEntries } from "astro:content";
+import ArticleTitle from "../../components/headings/ArticleTitle.astro";
+import Subheading from "../../components/headings/Subheading.astro";
+import ArticleCard from "../../components/articles/ArticleCard.astro";
+import ArticleCTA from "../../components/articles/ArticleCTA.astro";
+
+export async function getStaticPaths() {
+    const tools = await getCollection("tools");
+    return tools.map((entry) =>({
+        params: {slug: entry.slug},
+        props: {entry}
+    }));
+}
+
+type Props = {
+    entry: CollectionEntry<"tools">;
+}
+
+const {entry} = Astro.props;
+const {Content} = await entry.render();
+
+const relatedPosts = entry.data.relatedPosts ? await getEntries(entry.data.relatedPosts) : [];
+---
+
+<MarkdownWrapper frontmatter={entry.data}>
+   <div class="container mx-auto px-8 text-center pt-8 pb-16  max-w-article sm:pt-12 sm:pb-24 lg:px-30">
+
+   
+    <!-- Top Section (meta) -->
+        <ArticleTitle text={entry.data.title} />
+<!-- py-4 border-t-2 border-b-2 border-blue-600 mb-4 -->
+        
+
+<!-- CTA -->
+        <ArticleCTA />
+
+<!-- Content -->
+    <article class="text-start prose prose-lg prose-table:text-center prose-tr:border-blue-600 prose-thead:border-blue-600">
+        <Content />
+    </article>
+    
+</div>
+
+   
+    {
+        relatedPosts.length > 0 && (
+            <div class="container mx-auto">
+                <Subheading text={"Related Articles"}/>
+                <div class=" px-8">
+                    <div class="px-4 grid grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-2 lg:grid-cols-3 xl:gap-y-16 xl:gap-x-24">
+                        {
+                        relatedPosts.map( (p) => (
+                            <ArticleCard post={p}/>
+                        ))
+                        }
+                    </div>                    
+                </div>
+            </div>
+        )
+    }
+    
+</MarkdownWrapper>
