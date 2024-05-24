@@ -1,4 +1,5 @@
 ---
+import Image from "astro/components/Image.astro";
 import type { CollectionEntry } from "astro:content";
 import { getEntry } from "astro:content";
 
@@ -7,18 +8,19 @@ type Props = {
 };
 
 const {post} = Astro.props;
-const {author, description, title, image} = post.data
+const {author, description, title, cover, coverAlt} = post.data
 const url = `/articles/${post.slug}`;
+
 ---
 
 
 <div class="rounded-sm overflow-hidden">
-  <div class=" h-60 sm:h-72 md:h-48 lg:h-52">
+  <div class="h-60 sm:h-72 md:h-48 lg:h-60 xl:h-64">
     <a href={url}>
-        <img
-            src={image.src}
-            class="w-full h-full object-cover"
-            alt={image.alt}
+        <Image
+            src={cover}
+            class:list={"w-full h-full object-cover"}
+            alt={coverAlt}
         />
     </a>
   </div>

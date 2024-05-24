@@ -7,6 +7,7 @@ import ArticleTitle from "../../components/headings/ArticleTitle.astro";
 import Subheading from "../../components/headings/Subheading.astro";
 import ArticleCard from "../../components/articles/ArticleCard.astro";
 import ArticleCTA from "../../components/articles/ArticleCTA.astro";
+import Image from "astro/components/Image.astro";
 
 export async function getStaticPaths() {
     const posts = await getCollection("posts");
@@ -22,6 +23,7 @@ type Props = {
 
 const {entry} = Astro.props;
 const {Content} = await entry.render();
+
 const relatedPosts = entry.data.relatedPosts ? await getEntries(entry.data.relatedPosts) : [];
 ---
 
@@ -45,11 +47,10 @@ const relatedPosts = entry.data.relatedPosts ? await getEntries(entry.data.relat
             }
             </time>
         </div>
+
+    <Image class:list={"w-full rounded-sm overflow-hidden"} src={entry.data.cover} alt={entry.data.coverAlt} />
         
-        <img class=" w-full rounded-sm overflow-hidden"
-            src={entry.data.image.src} 
-            alt={entry.data.image.alt} 
-        />
+
 <!-- CTA -->
         <ArticleCTA />
 
@@ -60,7 +61,7 @@ const relatedPosts = entry.data.relatedPosts ? await getEntries(entry.data.relat
     
 </div>
 
-    <!-- Related Posts -->
+   
     {
         relatedPosts.length > 0 && (
             <div class="container mx-auto">
@@ -69,7 +70,7 @@ const relatedPosts = entry.data.relatedPosts ? await getEntries(entry.data.relat
                     <div class="px-4 grid grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-2 lg:grid-cols-3 xl:gap-y-16 xl:gap-x-24">
                         {
                         relatedPosts.map( (p) => (
-                            <ArticleCard post={p} />
+                            <ArticleCard post={p}/>
                         ))
                         }
                     </div>                    
@@ -77,4 +78,5 @@ const relatedPosts = entry.data.relatedPosts ? await getEntries(entry.data.relat
             </div>
         )
     }
+    
 </MarkdownWrapper>

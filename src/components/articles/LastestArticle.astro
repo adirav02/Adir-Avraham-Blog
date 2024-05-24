@@ -2,13 +2,14 @@
 import type { CollectionEntry } from "astro:content";
 import Subheading from "../headings/Subheading.astro";
 import Paragraph from "./../Paragraph.astro";
+import Image from "astro/components/Image.astro";
 
 type Props = {
     post: CollectionEntry<"posts">;
 };
 
 const {post} = Astro.props;
-
+const {author, description, title, cover, coverAlt} = post.data
 const url = `/articles/${post.slug}`;
 const subheading = "Latest";
 
@@ -16,10 +17,10 @@ const subheading = "Latest";
 
 
 <div class="flex flex-col items-center md:items-start">
-            <img
-              src={post.data.image.src}
-              alt={post.data.image.alt}
-              class=" w-9/12 rounded-sm overflow-hidden mb-3"
+            <Image
+              src={cover}
+              alt={coverAlt}
+              class:list={"w-9/12 rounded-sm overflow-hidden mb-3"}
             />
 
             <div class=" max-w-3/4">

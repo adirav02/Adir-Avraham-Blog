@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import circledLogoBlue from '../images/circledLogoBlue.png';
+import circledLogoBlue from '../assets/images/circledLogoBlue.png';
 import Disclamer from './Disclamer.astro';
 import FooterNavItem from './navigation/FooterNavItem.astro';
 ---
@@ -10,7 +10,8 @@ import FooterNavItem from './navigation/FooterNavItem.astro';
     <!-- Bottom Navigation -->
     <div class="container mx-auto grid grid-rows-2 gap-y-6 sm:grid-cols-2 sm:grid-rows-1 sm:gap-y-0">
         <div class=" justify-self-center">
-          <a href="#" class="block mb-8 sm:mb-0">
+          <!-- If page route is homepage src to # else, src to / -->
+          <a href="/" class="block mb-8 sm:mb-0">
             <Image src={circledLogoBlue} alt='Adir Avraham Logo' height={80} width={80}/>
           </a>
         </div>
