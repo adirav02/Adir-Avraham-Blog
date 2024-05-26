@@ -108,7 +108,7 @@ const BMRCalculator = () => {
         </label>
         <input
           type="number"
-          className="w-full p-2 border border-gray-300 rounded focus:border-blue-700 hover:border-blue-600 transition duration-300"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:border-blue-700 hover:border-blue-600 leading-tight focus:outline-none transition duration-300 focus:shadow-outline"
           value={weight}
           onChange={(e) => setWeight(e.target.value)}
           max="999"
@@ -121,7 +121,7 @@ const BMRCalculator = () => {
         </label>
         <input
           type="number"
-          className="w-full p-2 border border-gray-300 rounded focus:border-blue-700 hover:border-blue-600 transition duration-300"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:border-blue-700 hover:border-blue-600 leading-tight focus:outline-none transition duration-300 focus:shadow-outline"
           value={height}
           onChange={(e) => setHeight(e.target.value)}
           max="999"
@@ -132,7 +132,7 @@ const BMRCalculator = () => {
         <label className="block mb-1">Age:</label>
         <input
           type="number"
-          className="w-full p-2 border border-gray-300 rounded focus:border-blue-700 hover:border-blue-600 transition duration-300"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:border-blue-700 hover:border-blue-600 leading-tight focus:outline-none transition duration-300 focus:shadow-outline"
           value={age}
           onChange={(e) => setAge(e.target.value)}
           max="150"
@@ -183,7 +183,7 @@ const BMRCalculator = () => {
       <div className="mb-4">
         <label className="block mb-1">Activity Level:</label>
         <select
-          className="w-full p-2 border border-gray-300 rounded focus:border-blue-700 hover:border-blue-600 transition duration-300"
+          className="w-full p-2 border border-gray-300 rounded focus:outline-blue-700 hover:border-blue-600 transition duration-300"
           value={activity}
           onChange={(e) => setActivity(e.target.value)}
         >

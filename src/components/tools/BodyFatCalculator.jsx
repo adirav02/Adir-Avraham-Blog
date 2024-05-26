@@ -127,7 +127,7 @@ const BodyFatCalculator = () => {
         <label className="block mb-1">Age:</label>
         <input
           type="number"
-          className="w-full p-2 border border-gray-300 rounded focus:border-blue-700 hover:border-blue-600 transition duration-300"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:border-blue-700 hover:border-blue-600 leading-tight focus:outline-none transition duration-300 focus:shadow-outline"
           value={age}
           onChange={(e) => setAge(e.target.value)}
           max="150"
@@ -140,7 +140,7 @@ const BodyFatCalculator = () => {
         </label>
         <input
           type="number"
-          className="w-full p-2 border border-gray-300 rounded focus:border-blue-700 hover:border-blue-600 transition duration-300"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:border-blue-700 hover:border-blue-600 leading-tight focus:outline-none transition duration-300 focus:shadow-outline"
           value={weight}
           onChange={(e) => setWeight(e.target.value)}
           max="999"
@@ -152,7 +152,7 @@ const BodyFatCalculator = () => {
           <label className="block mb-1">Height (cm):</label>
           <input
             type="number"
-            className="w-full p-2 border border-gray-300 rounded focus:border-blue-700 hover:border-blue-600 transition duration-300"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:border-blue-700 hover:border-blue-600 leading-tight focus:outline-none transition duration-300 focus:shadow-outline"
             value={height}
             onChange={(e) => setHeight(e.target.value)}
             max="999"
@@ -165,7 +165,7 @@ const BodyFatCalculator = () => {
             <label className="block mb-1">Height (ft):</label>
             <input
               type="number"
-              className="w-full p-2 border border-gray-300 rounded focus:border-blue-700 hover:border-blue-600 transition duration-300"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:border-blue-700 hover:border-blue-600 leading-tight focus:outline-none transition duration-300 focus:shadow-outline"
               value={feet}
               onChange={(e) => setFeet(e.target.value)}
               max="9"
@@ -176,7 +176,7 @@ const BodyFatCalculator = () => {
             <label className="block mb-1">Height (in):</label>
             <input
               type="number"
-              className="w-full p-2 border border-gray-300 rounded focus:border-blue-700 hover:border-blue-600 transition duration-300"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:border-blue-700 hover:border-blue-600 leading-tight focus:outline-none transition duration-300 focus:shadow-outline"
               value={inches}
               onChange={(e) => setInches(e.target.value)}
               max="11"
@@ -191,7 +191,7 @@ const BodyFatCalculator = () => {
         </label>
         <input
           type="number"
-          className="w-full p-2 border border-gray-300 rounded focus:border-blue-700 hover:border-blue-600 transition duration-300"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:border-blue-700 hover:border-blue-600 leading-tight focus:outline-none transition duration-300 focus:shadow-outline"
           value={neck}
           onChange={(e) => setNeck(e.target.value)}
           max="999"
@@ -204,7 +204,7 @@ const BodyFatCalculator = () => {
         </label>
         <input
           type="number"
-          className="w-full p-2 border border-gray-300 rounded focus:border-blue-700 focus:ring-blue-700 hover:border-blue-600 transition duration-300"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:border-blue-700 hover:border-blue-600 leading-tight focus:outline-none transition duration-300 focus:shadow-outline"
           value={waist}
           onChange={(e) => setWaist(e.target.value)}
           max="999"

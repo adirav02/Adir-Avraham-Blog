@@ -1,6 +1,6 @@
 ---
 title: Is All This Cardio Really Necessary for Fat Loss?
-pubDate: 2023-10-03
+pubDate: 2024-05-25
 description: Is tons of cardio the key to fat loss? Uncover alternative strategies to supercharge your fat loss journey!
 author: Adir
 cover: ../../assets/post-images/is-all-this-cardio-really-necessary-for-fat-loss.jpeg

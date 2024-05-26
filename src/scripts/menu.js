@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("astro:page-load", (event) => {
   const hamburger = document.querySelector("#main-nav-hamburger");
   const close = document.querySelector("#main-nav-close");
   const nav = document.querySelector("#main-nav");

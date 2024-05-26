@@ -10,7 +10,7 @@ import { getEntry } from "astro:content";
 
 const mainHeading = "A Glimpse into My Thoughts";
 const tertialyHeading = "Articles";
-const articlesDescription="Most of my articles are about fitness, programming, and navigating the ever-evolving digital landscape. They're a blend of experimentation, exploration, and practical advice – a record of my journey to optimize health, conquer coding challenges, and make sense of the intersection of these fields.";
+const articlesDescription="Discover articles that blend the best of fitness, personal development, and wellness. Each piece is a snapshot of my journey – filled with experimentation, exploration, and practical advice. Whether you're looking to optimize your health, find motivation, or explore new ways to stay fit, there's something here for you.";
 
 const btnOutlineText = "All Articles";
 const articlesPageURL = "/articles/";
@@ -28,7 +28,7 @@ const latestArticle = await getEntry('posts','is-all-this-cardio-really-necessar
           
           <LatestArticle post={latestArticle}/>
 
-          <div class="flex flex-col justify-between">
+          <div class="flex flex-col justify-between xl:w-3/4">
             <HeadingTertiary text={tertialyHeading}/>
             <Paragraph text={articlesDescription} additionalClasses={"mb-5"}/>
             <div class="self-center  mt-8 md:mt-5 md:self-start">

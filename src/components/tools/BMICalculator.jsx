@@ -207,7 +207,7 @@ const BMICalculator = () => {
           value={weight}
           onChange={(e) => setWeight(e.target.value)}
           required
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 hover:border-blue-600"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:border-blue-700 hover:border-blue-600 leading-tight focus:outline-none transition duration-300 focus:shadow-outline"
           max="999"
           min="0"
         />
@@ -221,7 +221,7 @@ const BMICalculator = () => {
           value={height}
           onChange={(e) => setHeight(e.target.value)}
           required
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 hover:border-blue-600"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:border-blue-700 hover:border-blue-600 leading-tight focus:outline-none transition duration-300 focus:shadow-outline"
           max="300"
           min="0"
         />
