@@ -41,6 +41,9 @@ export default {
       "3/4": "75%",
       96: "24rem",
     },
+    boxShadow: {
+      hover: "inset 0px 0px 4px 0px",
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };
