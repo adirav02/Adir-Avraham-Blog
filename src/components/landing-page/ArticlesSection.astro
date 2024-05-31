@@ -3,9 +3,9 @@ import FeaturedArticles from "../articles/FeaturedArticles.astro";
 import HeadingSecondary from "../headings/HeadingSecondary.astro";
 import HeadingTertiary from "../headings/HeadingTertiary.astro";
 import LatestArticle from "../articles/LastestArticle.astro";
-import Paragraph from "../Paragraph.astro";
 import ButtonOutline from "../ButtonOutline.astro";
 import { getEntry } from "astro:content";
+import HeroDescription from "../text/HeroDescription.astro";
 
 
 const mainHeading = "A Glimpse into My Thoughts";
@@ -30,7 +30,7 @@ const latestArticle = await getEntry('posts','is-all-this-cardio-really-necessar
 
           <div class="flex flex-col justify-between xl:w-3/4">
             <HeadingTertiary text={tertialyHeading}/>
-            <Paragraph text={articlesDescription} additionalClasses={"mb-5"}/>
+            <HeroDescription text={articlesDescription} additionalClasses={"mb-5"}/>
             <div class="self-center  mt-8 md:mt-5 md:self-start">
               <ButtonOutline text={btnOutlineText} link={true} url={articlesPageURL}/>
             </div>
