@@ -111,6 +111,9 @@ const InputForm = ({ btnText }) => {
         onSubmit={handleSubmit}
       >
         <div>
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            First Name
+          </label>
           <input
             className="p-3 w-full text-lg border border-solid border-blue-700 rounded-sm placeholder:text-neutral-700 focus:outline-blue-700"
             id="full-name"
@@ -124,6 +127,9 @@ const InputForm = ({ btnText }) => {
         </div>
 
         <div>
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Email Adress
+          </label>
           <input
             className="p-3 w-full text-lg border border-solid border-blue-700 rounded-sm placeholder:text-neutral-700 focus:outline-blue-700"
             id="email"

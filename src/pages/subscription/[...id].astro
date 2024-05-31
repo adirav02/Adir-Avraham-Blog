@@ -24,8 +24,10 @@ try {
 ---
 
 <BaseLayout>
-    <div class="container mx-auto pt-6 pb-16 text-center bg-white sm:pt-12 sm:pb-24">
-        <HeadingPrimary text="Email Settings"/>
-    </div>
-     <EmailSettings id={user[0].id} email={user[0].email} currentFullName={user[0].fullName} client:load/>
+  <div class="container mx-auto pt-6 sm:pt-12  text-center bg-white">
+    <HeadingPrimary text="Email Settings"/>
+  </div>
+  <div class="container mx-auto flex justify-center">
+    <EmailSettings id={user[0].id} email={user[0].email} currentFullName={user[0].fullName} client:load/>
+  </div>
 </BaseLayout>

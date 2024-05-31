@@ -29,7 +29,7 @@ export const ConfirmationEmail = ({
     <Body style={main}>
       <Container style={container}>
         <Img
-          src="src/images/circledLogoBlue.png"
+          src="https://i.imgur.com/KjshcEv.png"
           width="150"
           height="150"
           alt="Logo"
@@ -48,12 +48,18 @@ export const ConfirmationEmail = ({
           fitness goals.
         </Text>
         <Text style={paragraph}>
-          To ensure you receive all our updates and confirm your email address,
-          click the button below to download your FREE Workout Log!
+          This downloadable spreadsheet is designed to help you stay motivated
+          and organized throughout your fitness journey.
+        </Text>
+        <Text style={paragraphBold}>
+          Click the link below to download your FREE Workout Log!
         </Text>
         <Section style={btnContainer}>
           {/* TODO: Link and Add to DataBase */}
-          <Button style={button} href="https://getkoala.com">
+          <Button
+            style={button}
+            href="https://docs.google.com/spreadsheets/d/1Fd543Ue34tQkiXVEKQlJHdqs3XX8j2fdkCBlBtbxSug/copy"
+          >
             Download Your Free Workout Log
           </Button>
         </Section>
@@ -65,7 +71,7 @@ export const ConfirmationEmail = ({
         <Hr style={hr} />
         <Section style={footer}>
           <Img
-            src="src/images/circledLogoBlue.png"
+            src="https://i.imgur.com/KjshcEv.png"
             width="75"
             height="75"
             alt="Adir"
@@ -111,10 +117,16 @@ const paragraph = {
   lineHeight: "26px",
 };
 
+const paragraphBold = {
+  fontSize: "18px",
+  lineHeight: "26px",
+  fontWeight: "600",
+};
+
 const footerName = {
   fontWeight: "600",
   fontSize: "18px",
-  margin: "0 0 12px 0",
+  margin: "6px 0 8px 0",
 };
 
 const footerLink = {

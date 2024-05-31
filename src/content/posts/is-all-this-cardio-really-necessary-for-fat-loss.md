@@ -11,7 +11,7 @@ tags:
   - Cardio
   - Nutrition
 relatedPosts:
-  - post-2
+  - how-i-boosted-my-bench-press-from-80kg-to-145kg-in-2-years-tips-to-help-you-do-the-same
 ---
 
 We have all been there, hitting the treadmill for miles, spending hours on the elliptical trainer, sweating it out, convinced this is the only way to lose those extra pounds. Weeks of grinding cardio yielded little progress and frustration after checking the scale.

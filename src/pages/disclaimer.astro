@@ -1,0 +1,68 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import HeadingPrimary from "../components/headings/HeadingPrimary.astro";
+import HeadingTertiary from "../components/headings/HeadingTertiary.astro";
+import Paragraph from "../components/Paragraph.astro";
+const title = "Disclaimer - Adir Avraham";
+const description = "Description"
+---
+
+<BaseLayout title={title} description={description}>
+    <div class="container mx-auto text-center mt-8">
+        <HeadingPrimary text={title} />
+    </div>
+    <article class="container mx-auto px-7">
+        <div class="mb-8">
+            <HeadingTertiary text="1. General Information" />
+            <Paragraph text="The information provided on AdirAvraham.com is for general informational purposes only. All content, including text, graphics, images, and other material, is provided in good faith. However, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site." />
+        </div>
+           
+        <div class="mb-8">    
+            <HeadingTertiary text="2. Not Professional Advice" />
+            <Paragraph text="The content of this blog is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health providers with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this blog." />
+        </div>
+         
+        <div class="mb-8">
+            <HeadingTertiary text="3. Personal Responsibility" />
+            <Paragraph text="You acknowledge and agree that you are solely responsible for your use of the information provided on this blog. AdirAvraham.com is not responsible or liable for any injury or harm that may result from the use of the information provided. Always consult with a healthcare professional before starting any fitness program, nutrition plan, or any other health-related initiative." />
+        </div>
+            
+        <div class="mb-8">
+            <HeadingTertiary text="4. Affiliate Links and Advertising" />
+            <Paragraph text="Some of the links on this blog are affiliate links, meaning, at no additional cost to you, we will earn a commission if you click through and make a purchase. This helps support the blog and allows us to continue to produce content. We only recommend products we genuinely believe in. Additionally, the blog may contain advertisements and sponsored content. We are not responsible for the content or claims of these advertisements or sponsored content." />    
+        </div>
+        <div class="mb-8">
+            <HeadingTertiary text="5. Testimonials" />
+            <Paragraph text="Any testimonials provided on this blog are individual experiences, reflecting real-life experiences of those who have used our products and/or services. However, they are individual results and results may vary. We do not claim that they are typical results that consumers will generally achieve." />
+        </div>
+
+        <div class="mb-8">
+            <HeadingTertiary text="6. External Links" />
+            <Paragraph text="This blog may contain links to other websites or content belonging to or originating from third parties or links to websites and features in banners or other advertising. Such external links are not investigated, monitored, or checked for accuracy, adequacy, validity, reliability, availability, or completeness by us. We do not warrant, endorse, guarantee, or assume responsibility for the accuracy or reliability of any information offered by third-party websites linked through the site or any website or feature linked in any banner or other advertising." />
+        </div>
+
+        <div class="mb-8">
+            <HeadingTertiary text="7. Limitation of Liability" />
+            <Paragraph text="In no event shall AdirAvraham.com, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the site; (ii) any conduct or content of any third party on the site; (iii) any content obtained from the site; and (iv) unauthorized access, use, or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence), or any other legal theory, whether or not we have been informed of the possibility of such damage." />
+        </div>
+
+        <div class="mb-8">
+        <HeadingTertiary text="8. Health and Fitness Disclaimer" />
+        <Paragraph text="AdirAvraham.com offers health, fitness, and nutritional information, and is designed for educational purposes only. You should not rely on this information as a substitute for, nor does it replace, professional medical advice, diagnosis, or treatment. If you have any concerns or questions about your health, you should always consult with a physician or other healthcare professional. Do not disregard, avoid, or delay obtaining medical or health-related advice from your healthcare professional because of something you may have read on this site. The use of any information provided on this site is solely at your own risk." />
+        </div>
+        
+        <div class="mb-8">
+        <HeadingTertiary text="9. Results Disclaimer" />
+        <Paragraph text="We do not guarantee results based on the use of our blog, and any results you achieve may vary. The outcomes mentioned in testimonials and other content are not typical and should not be expected as a standard result." />
+        </div>
+        
+        <div class="mb-8">
+            <HeadingTertiary text="10. Changes to This Disclaimer" />
+            <Paragraph text="We may update our Disclaimer from time to time. We will notify you of any changes by posting the new Disclaimer on this page. You are advised to review this Disclaimer periodically for any changes. Changes to this Disclaimer are effective when they are posted on this page." />
+        </div>
+    </article>
+    <div class="container mx-auto px-7 py-10">
+        <HeadingTertiary text="Contact Us" />
+        <p>If you have any questions about this Disclaimer, you can contact us at <a href="mailto:adir@adiravraham.com" class="text-blue-600 hover:text-blue-800 transition-all duration-300">adir@adiravraham.com</a>.</p>
+    </div>
+</BaseLayout>

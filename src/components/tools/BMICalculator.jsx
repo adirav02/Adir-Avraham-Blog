@@ -2,7 +2,9 @@ import React, { useState } from "react";
 
 const BMICalculator = () => {
   const [weight, setWeight] = useState("");
-  const [height, setHeight] = useState("");
+  const [heightFeet, setHeightFeet] = useState("");
+  const [heightInches, setHeightInches] = useState("");
+  const [heightCm, setHeightCm] = useState("");
   const [unit, setUnit] = useState("metric");
   const [bmi, setBmi] = useState(null);
   const [category, setCategory] = useState("");
@@ -15,22 +17,27 @@ const BMICalculator = () => {
 
   const resetForm = () => {
     setWeight("");
-    setHeight("");
+    setHeightFeet("");
+    setHeightInches("");
+    setHeightCm("");
     setBmi(null);
     setCategory("");
     setRecommendation("");
   };
 
   const calculateBMI = () => {
-    if (weight && height) {
+    if (weight && (unit === "metric" ? heightCm : heightFeet && heightInches)) {
       const w = parseFloat(weight);
-      const h = parseFloat(height);
-
       let bmiValue;
+
       if (unit === "metric") {
+        const h = parseFloat(heightCm);
         bmiValue = w / (h / 100) ** 2;
       } else {
-        bmiValue = (w / h / h) * 703;
+        const hFeet = parseFloat(heightFeet);
+        const hInches = parseFloat(heightInches);
+        const hTotalInches = hFeet * 12 + hInches;
+        bmiValue = (w / hTotalInches / hTotalInches) * 703;
       }
 
       setBmi(bmiValue.toFixed(2));
@@ -195,7 +202,7 @@ const BMICalculator = () => {
               : "bg-white text-blue-600"
           } hover:border-blue-600`}
         >
-          lbs/inches
+          lbs/ft+in
         </label>
       </div>
       <div className="mb-4">
@@ -212,20 +219,50 @@ const BMICalculator = () => {
           min="0"
         />
       </div>
-      <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2">
-          Height ({unit === "metric" ? "cm" : "inches"}):
-        </label>
-        <input
-          type="number"
-          value={height}
-          onChange={(e) => setHeight(e.target.value)}
-          required
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:border-blue-700 hover:border-blue-600 leading-tight focus:outline-none transition duration-300 focus:shadow-outline"
-          max="300"
-          min="0"
-        />
-      </div>
+      {unit === "metric" ? (
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Height (cm):
+          </label>
+          <input
+            type="number"
+            value={heightCm}
+            onChange={(e) => setHeightCm(e.target.value)}
+            required
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:border-blue-700 hover:border-blue-600 leading-tight focus:outline-none transition duration-300 focus:shadow-outline"
+            max="300"
+            min="0"
+          />
+        </div>
+      ) : (
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Height:
+          </label>
+          <div className="flex gap-2">
+            <input
+              type="number"
+              value={heightFeet}
+              onChange={(e) => setHeightFeet(e.target.value)}
+              required
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:border-blue-700 hover:border-blue-600 leading-tight focus:outline-none transition duration-300 focus:shadow-outline"
+              max="9"
+              min="0"
+              placeholder="ft"
+            />
+            <input
+              type="number"
+              value={heightInches}
+              onChange={(e) => setHeightInches(e.target.value)}
+              required
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:border-blue-700 hover:border-blue-600 leading-tight focus:outline-none transition duration-300 focus:shadow-outline"
+              max="11"
+              min="0"
+              placeholder="in"
+            />
+          </div>
+        </div>
+      )}
       <div className="mb-4 text-center">
         <button
           onClick={calculateBMI}

@@ -14,9 +14,11 @@ const EmailSettings = ({ id, email, currentFullName }) => {
     }
   };
 
-  const handlePatch = async () => {
+  const handlePatch = async (event) => {
+    event.preventDefault();
     try {
-      fetch(`/api/${id}.json`, {
+      setIsSubmitting(true);
+      await fetch(`/api/${id}.json`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -26,12 +28,14 @@ const EmailSettings = ({ id, email, currentFullName }) => {
       alert("Patched");
     } catch (e) {
       console.error(e);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   const handleUnsubscribe = async () => {
     try {
-      fetch(`/api/${id}.json`, {
+      await fetch(`/api/${id}.json`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -47,13 +51,13 @@ const EmailSettings = ({ id, email, currentFullName }) => {
   const handleClosePopup = () => setIsPopupDisplayed(false);
 
   return (
-    <div className="px-6 flex flex-col gap-10 lg:max-w-96">
+    <div className="flex flex-col items-center justify-center px-6 py-10 gap-10 w-full max-w-96  mx-auto">
       {/* Update email */}
-      <form onSubmit={handlePatch} className="flex-col justify-center">
-        <div className="mb-4 flex flex-col gap-2">
+      <form onSubmit={handlePatch} className="w-full flex flex-col gap-6">
+        <div className="flex flex-col gap-2">
           <label className="text-lg">Name:</label>
           <input
-            className="p-3 w-full text-lg border border-solid border-blue-700 rounded-sm placeholder:text-neutral-700 focus:outline-blue-700"
+            className="p-3 text-lg border border-solid border-blue-700 rounded-sm placeholder:text-neutral-700 focus:outline-blue-700"
             id="full-name"
             type="text"
             placeholder="First Name"
@@ -63,10 +67,10 @@ const EmailSettings = ({ id, email, currentFullName }) => {
           />
         </div>
 
-        <div className="mb-4 flex flex-col gap-2">
+        <div className="flex flex-col gap-2">
           <label className="text-lg">Email:</label>
           <input
-            className="p-3 w-full bg-neutral-300 text-lg border border-solid border-neutral-600 rounded-sm cursor-not-allowed focus:outline-none"
+            className="p-3 bg-neutral-300 text-lg border border-solid border-neutral-600 rounded-sm cursor-not-allowed focus:outline-none"
             id="email"
             type="text"
             name="email"
@@ -78,7 +82,7 @@ const EmailSettings = ({ id, email, currentFullName }) => {
 
         <button
           type="submit"
-          className={`p-3 mt-3 w-full text-xl bg-blue-600 text-white border border-solid border-blue-600 transition-all duration-300 rounded-sm lg:mt-0 lg:self-end hover:bg-blue-700 ${
+          className={`p-3 text-xl bg-blue-600 text-white border border-solid border-blue-600 transition-all duration-300 rounded-sm hover:bg-blue-700 ${
             isSubmitting ? "disabled opacity-50 cursor-not-allowed" : ""
           }`}
         >
@@ -86,12 +90,12 @@ const EmailSettings = ({ id, email, currentFullName }) => {
         </button>
       </form>
 
-      <hr />
+      <hr className="w-full" />
 
       {/* Unsubscribe */}
-      <div className="pb-10">
+      <div className="w-full">
         <button
-          className={`p-3 w-full text-xl bg-red-600 text-white border border-solid border-red-600 transition-all duration-300 rounded-sm lg:mt-0 lg:self-end hover:bg-red-700`}
+          className="p-3 w-full text-xl bg-red-600 text-white border border-solid border-red-600 transition-all duration-300 rounded-sm hover:bg-red-700"
           onClick={handleOpenPopup}
         >
           Unsubscribe

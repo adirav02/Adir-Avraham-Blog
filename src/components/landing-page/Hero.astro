@@ -4,7 +4,7 @@ import HeadingPrimary from "../headings/HeadingPrimary.astro";
 import HeroDescription from "../text/HeroDescription.astro";
 import HeroCTAForm from '../forms/HeroCTAForm.tsx';
 
-import circledLogoBlue from '../../assets/images/circledLogoBlue.png';
+import AdirAvrahamImage from '../../assets/images/adir-avraham.jpg';
 
 const heroDescription = `Welcome to my corner of the web! Dive into a world where health, fitness, and personal growth converge. Here, you'll find a treasure trove of insights and tips designed to help you unlock your potential and lead a vibrant, balanced life.`;
 const heroCTAText = "Join my newsletter to receive weekly updates filled with actionable fitness hacks, health tips, and inspiration to keep you on track towards your goals.";
@@ -24,9 +24,9 @@ const headingText = "Hi, I'm Adir Avraham"
             <HeroCTAForm client:load/>
           </div>
 
-          <div>
+          <div class="rounded-sm overflow-hidden">
             <!-- TODO: Change Image -->
-            <Image src={circledLogoBlue} alt='A picture of me' class:list={"mx-auto w-4/5 sm:w-3/5 lg:w-full lg:max-h-1/2"}/>
+            <Image src={AdirAvrahamImage} alt={"Adir Avraham"} class:list={"mx-auto w-4/5 sm:w-3/5 lg:w-full xl:w-3/4"}/>
           </div>
         </div>
 </section>
