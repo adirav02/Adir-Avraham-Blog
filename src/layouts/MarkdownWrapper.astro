@@ -1,10 +1,25 @@
 ---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
 import FullCTA from "../components/FullCTA.astro";
-import BaseLayout from "./BaseLayout.astro";
+import Header from "../components/Header.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout title={frontmatter.title} description={frontmatter.description}>
-    <slot />
-  <FullCTA />
-</BaseLayout>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={frontmatter.title} description={frontmatter.description} />
+    <!-- Article Meta Tags -->
+    <meta property="article:published_time" content={frontmatter.pubDate}>
+    <meta property="article:author" content={frontmatter.author}>
+    <meta property="article:tag" content={frontmatter.tags.map(String).join(',')}>
+	</head>
+
+	<body>
+		<Header/>
+        <slot />
+        <FullCTA />
+		<Footer/>
+	</body>
+</html>
