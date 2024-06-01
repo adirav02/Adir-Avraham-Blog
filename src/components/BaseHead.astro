@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
+import GoogleAnalytics from "./GoogleAnalytics.astro";
 
 
 const {title, description, image} = Astro.props;
@@ -7,6 +8,9 @@ const {title, description, image} = Astro.props;
 // const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
+    <!-- Google Analytics Code -->
+    <GoogleAnalytics />
+    
     <!-- Global Metadata -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
