@@ -9,7 +9,16 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), db(), mdx(), sitemap()],
+  site: "https://adiravraham.com",
+  integrations: [
+    tailwind(),
+    react(),
+    db(),
+    mdx(),
+    sitemap({
+      filter: (page) => page !== "https://adiravraham.com/subscription/",
+    }),
+  ],
   output: "hybrid",
-  adapter: netlify()
+  adapter: netlify(),
 });
