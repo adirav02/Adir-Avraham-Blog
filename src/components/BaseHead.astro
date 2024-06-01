@@ -1,6 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import GoogleAnalytics from "./GoogleAnalytics.astro";
+
 
 
 const {title, description, image} = Astro.props;
@@ -9,7 +9,16 @@ const {title, description, image} = Astro.props;
 ---
 
     <!-- Google Analytics Code -->
-    <GoogleAnalytics />
+    <script 
+      type="text/partytown"
+      async src="https://www.googletagmanager.com/gtag/js?id=G-HN260TVZHC"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-HN260TVZHC');
+  </script>
     
     <!-- Global Metadata -->
     <meta charset="UTF-8" />

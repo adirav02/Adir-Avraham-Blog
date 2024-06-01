@@ -19,11 +19,7 @@ export default defineConfig({
     sitemap({
       filter: (page) => page !== "https://adiravraham.com/subscription/",
     }),
-    partytown({
-      config: {
-        forward: ["dataLayer.push"],
-      },
-    }),
+    partytown(),
   ],
   output: "hybrid",
   adapter: netlify(),
