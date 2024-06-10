@@ -6,11 +6,11 @@ author: Adir
 cover: ../../assets/post-images/bench-press-image.jpeg
 coverAlt: How I Boosted My Bench Press from 80kg to 145kg in 2 Years - Tips to Help You Do the Same
 tags:
-  - Fat Loss
-  - Cardio
-  - Nutrition
+  - Muscle Building
+  - Strength Training
 relatedPosts:
   - is-all-this-cardio-really-necessary-for-fat-loss
+  - the-legs-workout-you-will-feel-until-next-week
 ---
 
 Hello guys! I often hear from folks in my gym who are stuck progressing in the Bench Press and wonder how I keep setting higher PRs very frequently.
