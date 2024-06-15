@@ -11,6 +11,7 @@ tags:
 relatedPosts:
   - is-all-this-cardio-really-necessary-for-fat-loss
   - the-legs-workout-you-will-feel-until-next-week
+  - the-ultimate-leg-press-guide
 ---
 
 Hello guys! I often hear from folks in my gym who are stuck progressing in the Bench Press and wonder how I keep setting higher PRs very frequently.

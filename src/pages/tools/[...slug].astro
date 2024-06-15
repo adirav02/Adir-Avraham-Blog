@@ -7,6 +7,7 @@ import ArticleTitle from "../../components/headings/ArticleTitle.astro";
 import Subheading from "../../components/headings/Subheading.astro";
 import ArticleCard from "../../components/articles/ArticleCard.astro";
 import ArticleCTA from "../../components/articles/ArticleCTA.astro";
+import Prose from "../../components/articles/Prose.astro";
 
 export async function getStaticPaths() {
     const tools = await getCollection("tools");
@@ -39,9 +40,9 @@ const relatedPosts = entry.data.relatedPosts ? await getEntries(entry.data.relat
         <ArticleCTA />
 
 <!-- Content -->
-    <article class="text-start prose prose-lg prose-table:text-center prose-tr:border-blue-600 prose-thead:border-blue-600">
+    <Prose class="text-start prose prose-lg prose-table:text-center prose-tr:border-blue-600 prose-thead:border-blue-600">
         <Content />
-    </article>
+    </Prose>
     
 </div>
 

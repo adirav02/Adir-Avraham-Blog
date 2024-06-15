@@ -13,6 +13,7 @@ tags:
 relatedPosts:
   - how-i-boosted-my-bench-press-from-80kg-to-145kg-in-2-years-tips-to-help-you-do-the-same
   - the-legs-workout-you-will-feel-until-next-week
+  - the-ultimate-leg-press-guide
 ---
 
 We have all been there, hitting the treadmill for miles, spending hours on the elliptical trainer, sweating it out, convinced this is the only way to lose those extra pounds. Weeks of grinding cardio yielded little progress and frustration after checking the scale.

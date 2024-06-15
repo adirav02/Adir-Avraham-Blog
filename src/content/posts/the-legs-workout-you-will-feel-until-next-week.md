@@ -12,6 +12,7 @@ tags:
 relatedPosts:
   - how-i-boosted-my-bench-press-from-80kg-to-145kg-in-2-years-tips-to-help-you-do-the-same
   - is-all-this-cardio-really-necessary-for-fat-loss
+  - the-ultimate-leg-press-guide
 ---
 
 Many guys consider leg day the toughest workout. Statistics back this up - a [study](https://www.tonal.com/blog/skipping-leg-day/) found only 8% favor lower-body workouts! As many guys neglect leg workouts, the results are bad, while the upper body muscles are developing the leg muscles are kept at the same size, leading to unproportioned muscles in their bodies and unbalanced physiques.
@@ -45,7 +46,9 @@ The quadriceps femoris, or simply **quads**, is a group of four muscles located 
 **Example Exercises:**
 
 - Squats
+
 - Leg Press
+
 - Lunges
 
 ### Hamstrings
@@ -57,7 +60,9 @@ The hamstrings are a group of three muscles, located at the **posterior thighs**
 **Example Exercises:**
 
 - Romanian Deadlifts
+
 - Hamstring Curls (lying or seated variations)
+
 - Glute Bridges
 
 ### Calves
@@ -69,6 +74,7 @@ Often neglected during leg workouts, the calves (also called the calf muscles) a
 **Example Exercises:**
 
 - Calf Raises - seated/standing variations
+
 - Stair Climbing
 
 ## Leg Workouts Frequency and Duration
@@ -97,26 +103,23 @@ Now, let’s get to the business of building strong legs. Compound movements eng
 
 #### **Barbell Full Squats** (4 sets of 8-12 reps)
 
-- Muscles Worked: Quads, hamstrings, glutes, core
+- **Muscles Worked:** Quads, hamstrings, glutes, core
 
-- How To Do It: Stand with feet shoulder-width apart, toes slightly pointed out. Hold the barbell across your upper back (not on your neck), core engaged, and back straight. Squat down as if sitting in a chair, keeping your knees tracking over your toes. Push through your heels to stand back up.
+- **How To Do It:** Stand with feet shoulder-width apart, toes slightly pointed out. Hold the barbell across your upper back (not on your neck), core engaged, and back straight. Squat down as if sitting in a chair, keeping your knees tracking over your toes. Push through your heels to stand back up.
 
-- Variations:
+- **Variations:**
 
   - **Front Squats:** Hold the barbell over your shoulders, targeting more quads. More core engagement than regular squats
-
   - **Hack Squats**: Squats on a machine, better stability and easier for beginners.
-
   - **Bulgarian Split Squats:** Single-leg squats for improved balance and core engagement.
 
 #### **Romanian Deadlifts** (4 sets of 10-15 reps)
 
-- Muscles Worked: Hamstrings, glutes, lower back (focus on hinge movement at the hips, not rounding your back)
+- **Muscles Worked:** Hamstrings, glutes, lower back (focus on hinge movement at the hips, not rounding your back)
 
-- Variations:
+- **Variations:**
 
   - **Glute-focused Back Extensions:** Targets your glutes specifically by keeping your torso more horizontal.
-
   - **Hip Thrust:** Builds strong glutes with hips flexed at 90 degrees.
 
 ### Isolation Exercises (Burnout the muscles):
@@ -125,15 +128,16 @@ Now, let’s get to the business of building strong legs. Compound movements eng
 
 Develops your quads while seated, allowing for controlled movement.
 
-- Muscles worked: Quads
+- **Muscles worked:** Quads
 
 - **Tip:** Experiment with different foot placements – wider stance for inner quads, narrower stance for outer quads – explored in a future post!
+- **Check out [The Ultimate Leg Press Guide](https://adiravraham.com/articles/the-ultimate-leg-press-guide) for a complete guide on this exercise.**
 
 #### Leg Extensions (3 sets of 15-20 reps)
 
 Isolates your quads for targeted knee extension.
 
-- Muscles Worked: Quads
+- **Muscles Worked:** Quads
 
 - **Tip:** Don't hyperextend your knee at the top of the movement.
 
@@ -141,7 +145,7 @@ Isolates your quads for targeted knee extension.
 
 Targets your hamstrings for focused knee flexion.
 
-- Muscles Worked: Hamstrings
+- **Muscles Worked:** Hamstrings
 
 - **Tip:** Keep your core engaged and avoid arching your back.
 
@@ -161,15 +165,15 @@ Strong calves are essential for proper ankle function, stability, and explosive 
 
 ## The Workout
 
-| **Exercise**         | **Sets** | **Reps** |
-| -------------------- | -------- | -------- |
-| Barbell Full Squats  | 4        | 8-12     |
-| Romanian Deadlifts   | 4        | 10-15    |
-| Leg Press            | 3        | 12-15    |
-| Leg Extensions       | 3        | 15-20    |
-| Lying Leg Curls      | 3        | 15-20    |
-| Seated Calf Raises   | 3        | 20-25    |
-| Standing Calf Raises | 3        | 20-25    |
+| Exercise             | Sets | Reps  |
+| -------------------- | ---- | ----- |
+| Barbell Full Squats  | 4    | 8-12  |
+| Romanian Deadlifts   | 4    | 10-15 |
+| Leg Press            | 3    | 12-15 |
+| Leg Extensions       | 3    | 15-20 |
+| Lying Leg Curls      | 3    | 15-20 |
+| Seated Calf Raises   | 3    | 20-25 |
+| Standing Calf Raises | 3    | 20-25 |
 
 ## **Training Tips:**
 

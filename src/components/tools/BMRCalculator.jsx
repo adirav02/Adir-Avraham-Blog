@@ -54,8 +54,8 @@ const BMRCalculator = () => {
           (gender === "male" ? 5 : -161);
       }
 
-      setBmr(bmrValue.toFixed(2));
-      setCalories((bmrValue * parseFloat(activity)).toFixed(2));
+      setBmr(bmrValue.toFixed(0));
+      setCalories((bmrValue * parseFloat(activity)).toFixed(0));
     } else {
       setError("Please fill in all fields correctly.");
     }
@@ -215,20 +215,17 @@ const BMRCalculator = () => {
         <div className="mt-4 p-4 bg-gray-100 rounded-lg">
           <h2 className="text-xl font-bold text-blue-600 mb-2">Results</h2>
           <p className="text-lg">
-            BMR: <span className="font-bold">{bmr}</span> kcal/day
-          </p>
-          <p className="text-lg">
             Daily Calories: <span className="font-bold">{calories}</span>{" "}
             kcal/day
           </p>
           <p className="text-lg mt-2">
             For muscle building:{" "}
-            <span className="font-bold">{(calories * 1.15).toFixed(2)}</span>{" "}
+            <span className="font-bold">{(calories * 1.15).toFixed(0)}</span>{" "}
             kcal/day
           </p>
           <p className="text-lg">
             For weight loss:{" "}
-            <span className="font-bold">{(calories * 0.85).toFixed(2)}</span>{" "}
+            <span className="font-bold">{(calories * 0.85).toFixed(0)}</span>{" "}
             kcal/day
           </p>
           <p className="text-sm mt-2 text-gray-700">
