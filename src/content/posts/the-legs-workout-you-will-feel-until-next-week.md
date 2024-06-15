@@ -81,7 +81,7 @@ Often neglected during leg workouts, the calves (also called the calf muscles) a
 
 ### Frequency
 
-Aim for **at least one dedicated leg workout every week** to maintain muscle strength and function. Ideally**, train your legs twice a week for faster progress and building sculpted legs**. This allows for proper recovery and targeted training of different groups within your legs.
+Aim for **at least one dedicated leg workout every week** to maintain muscle strength and function. Ideally, **train your legs twice a week for faster progress and building sculpted legs**. This allows for proper recovery and targeted training of different groups within your legs.
 
 ### Duration
 

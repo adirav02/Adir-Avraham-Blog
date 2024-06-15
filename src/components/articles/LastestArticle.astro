@@ -17,12 +17,13 @@ const subheading = "Latest";
 
 
 <div class="flex flex-col items-center md:items-start">
-            <Image
-              src={cover}
-              alt={coverAlt}
-              class:list={"w-9/12 rounded-sm overflow-hidden mb-3"}
-            />
-
+  <a href={url}>          
+  <Image            
+    src={cover}          
+    alt={coverAlt}        
+    class:list={"w-9/12 rounded-sm overflow-hidden mb-3"}        
+  />
+</a>
             <div class=" max-w-3/4">
               <Subheading text={subheading} />
 
