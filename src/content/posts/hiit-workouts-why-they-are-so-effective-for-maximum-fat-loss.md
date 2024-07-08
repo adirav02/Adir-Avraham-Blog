@@ -130,13 +130,13 @@ Notes
 
 ## 5. All-Out Agility (Advanced)
 
-| Exercise                                                                        | Time       | Rest              |
-| ------------------------------------------------------------------------------- | ---------- | ----------------- |
-| High Knees with Lateral Shuffles (shuffle side-to-side for 15 seconds each leg) | 30 seconds | 10<br><br>seconds |
-| High Jumps in the spot                                                          | 40 seconds | 10<br><br>seconds |
-| Jumping Squats                                                                  | 40 seconds | 10 seconds        |
-| Sprints                                                                         | 30 seconds |                   |
-| Rest                                                                            | 30 seconds |                   |
+| Exercise                                                                        | Time       | Rest       |
+| ------------------------------------------------------------------------------- | ---------- | ---------- |
+| High Knees with Lateral Shuffles (shuffle side-to-side for 15 seconds each leg) | 30 seconds | 10 seconds |
+| High Jumps in the spot                                                          | 40 seconds | 10 seconds |
+| Jumping Squats                                                                  | 40 seconds | 10 seconds |
+| Sprints                                                                         | 30 seconds |            |
+| Rest                                                                            | 30 seconds |            |
 
 Notes
 
