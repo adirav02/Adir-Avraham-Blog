@@ -110,7 +110,7 @@ Remember, when you are starting as a beginner you will break your PRs every week
 
 Break your PR with as much weight as you believe you can press. If you fail, keep working and try again next month or when you are ready again.
 
-# In a Nutshell:
+## In a Nutshell:
 
 Improving your bench press performance requires mastering proper technique, incorporating supportive exercises, and following a strategic workout plan.
 

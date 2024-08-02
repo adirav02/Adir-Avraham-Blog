@@ -22,26 +22,26 @@ But hold on! Shedding those unwanted pounds doesn't have to be a marathon of end
 
 Before we dive into the tactics, let's explore and understand how fat is created.
 
-# Fat
+## Fat
 
-## Calories
+### Calories
 
 Calorie is a measurement of the energy content of food. The body needs calories to perform its functions, such as breathing, blood circulation, and physical activity.  
 You gain calories by eating food.
 
-## How Fat Is Created?
+### How Fat Is Created?
 
 Fat is created by an excess of calories, when you eat too many calories each day, the excess calories have to go somewhere. Your body stores these calories by turning them into body fat.
 
-## How does Fat burn?
+### How does Fat burn?
 
 Fat loss happens when your body burns more calories than it consumes.
 
 Now, after we understand how our bodies gain weight and fat, it's time to understand what cardio is and how it might help us lose weight.
 
-# Cardio
+## Cardio
 
-## What is Cardio Exercise?
+### What is Cardio Exercise?
 
 Cardio exercise, sometimes called aerobic or endurance exercise, is any rhythmic activity that raises your heart rate to a target heart rate zone.
 
@@ -49,7 +49,7 @@ During the activity, oxygen is heavily involved in the cellular reactions that p
 
 Imagine your body's like a giant phone. It needs power (energy) to work out, right? During exercise, your body uses oxygen (like the charger) to fuel tiny reactions inside your cells (like the phone's battery). These reactions give your muscles the energy they need to keep going!
 
-## Examples of Cardio Exercises
+### Examples of Cardio Exercises
 
 - Running
 - Elliptical
@@ -58,7 +58,7 @@ Imagine your body's like a giant phone. It needs power (energy) to work out, rig
 - Walking
 - Cycling
 
-## How Can Cardio Help You Burn Fat?
+### How Can Cardio Help You Burn Fat?
 
 Cardio is great for fat loss because raising your heart rate means your body uses more energy and burns calories faster.
 
@@ -66,7 +66,7 @@ To get the most out of cardio, use intense exercises that target large muscle gr
 
 Why do you get winded faster while sprinting than taking a casual walk? It's because your body needs a massive energy boost to keep up with the intense activity. All that extra energy comes from burning calories. So, sprinting burns calories quicker than walking because your body is working much harder.
 
-# Is it Necessary To Do a Lot of Cardio?
+## Is it Necessary To Do a Lot of Cardio?
 
 Your body loses fat when the daily calorie intake is lower than how many calories your body burns.
 
@@ -74,31 +74,31 @@ We often think exercise is the only key to weight loss. Your body doesn't care i
 
 It's all about creating a calorie deficit - burning more calories than you consume.
 
-# How to Lose Fat without cardio
+### How to Lose Fat without cardio
 
 Your body burns a certain number of calories each day. The key to fat loss lies in understanding this number and creating a calorie deficit.
 
 But how do you figure out your body's unique calorie burn? Let's crack the code! Head over to our dedicated calorie calculator to reveal your daily burn rate.
 
-## Nutrition
+### Nutrition
 
 Eating fewer calories than your body burns daily results in fat loss. But, how do we eat less food without sacrificing energy levels and staying hungry?
 
-### Eating Less Dense Calories
+#### Eating Less Dense Calories
 
 It's that dreaded 3:00 pm slump. Your stomach growls, your eyes glaze over, and suddenly, the candy aisle beckons. A sugary Kit-Kat whispering your name, promising a much-needed burst of energy and pure chocolatey bliss. But hold on! before you reach for that KitKat bar, consider this: it packs a whopping 218 calories! Three of those could leave you hungry AND regretting it later.
 
 Now, let's talk about a guilt-free powerhouse: The humble cucumber. A whole cap of this refreshing veggie clocks in at a mere 16 calories. You can make a giant, delicious salad for less the cost than a single Kit-Kat!
 
-### Keep High Protein Impact
+#### Keep High Protein Impact
 
 When you are in a calorie deficit,  your body might start breaking down muscle tissue for energy, and you can lose muscle mass.
 
 By keeping your protein intake high during a calorie deficit, you can help your body preserve precious muscle mass. Protein is the building block of muscle, and a steady supply ensures your body uses fat stores for energy instead.  This helps you healthily lose weight while keeping that toned physique you're working hard for.
 
-## Training
+### Training
 
-### Short Breaks, More Volume: Weightlifting for Cardio Results!
+#### Short Breaks, More Volume: Weightlifting for Cardio Results!
 
 Ditch the Long Rest Periods: By shortening your breaks between sets, you can keep your heart rate up and your body working harder. This mimics the effects of a cardio session.
 
@@ -106,11 +106,11 @@ Pump Up the Volume: Doing more reps per set with lighter weights increases your 
 
 This approach is often called _Density Training_. It helps you burn more calories, build muscle, and save time in one workout!
 
-### Add More Compound Exercises
+#### Add More Compound Exercises
 
 Compound exercises work on multiple muscle groups at once, creating a high-energy firestorm in your body. This translates to more calories burned during your workout. So ditch the bicep curls and embrace exercises like squats, lunges, and rows.
 
-# Full Body Fat Burning Circuit Workout You Can Do Everywhere
+## Full Body Fat Burning Circuit Workout You Can Do Everywhere
 
 This full-body circuit workout is your ticket to serious calorie burning, no matter where you are.
 
@@ -133,15 +133,15 @@ You can do as many circuits as you would like, and rest for 1 minute when comple
 
 \*\*This is YOUR workout! Adjust the reps to fit your fitness level
 
-# Additional Tips 
+## Additional Tips 
 
-## Patience is Key
+### Patience is Key
 
 - Drastically reducing calories can cause your body to break down muscle for energy, which slows down your metabolism and makes it harder to maintain weight loss in the long run.
 
 - A slower, controlled calorie deficit during a cutting phase is a safer and sustainable weight loss approach. It allows you to lose fat while minimizing muscle loss and optimizing your metabolism.
 
-# In a Nutshell:
+## In a Nutshell:
 
 We busted the myth that you need tons of cardio to lose weight. We explored alternative strategies that can help you reach your weight loss goals more sustainably.
 
