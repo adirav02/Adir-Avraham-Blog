@@ -1,47 +1,18 @@
-# Astro Starter Kit: Minimal
+# Portfolio Project - My Personal Blog
 
-```sh
-npm create astro@latest -- --template minimal
-```
+As a self-taught software developer passionate about health and fitness, I combined my skills to create adiravraham.com, a dynamic fitness blog designed and developed from scratch.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+Leveraging my expertise in front-end development, **I planned, designed, and built the website from scratch** using React, Astro, and TailwindCSS.
+Additionally, I integrated essential features like an email management system with Resend and utilized AstroDB for newsletter storage. 
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+While my primary focus was on development, I also write articles covering workout routines, nutrition, and healthy lifestyle habits. Each article informs, inspires, and empowers readers on their fitness journey.
 
-## 🚀 Project Structure
+## Key Features:
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Custom Design and Development:** planned, designed, and developed every aspect of the website using React, Astro, and TailwindCSS for a seamless user experience and visually stunning interface.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- **Email Management System Integration:** Efficiently manage subscriber engagement with an email management system using **Resend**, delivering regular newsletters, exclusive content, and updates directly to subscribers' inboxes.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- **Newsletter User Storage with AstroDB:** Securely store subscriber information and manage newsletter distribution using AstroDB and Resend.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Local Storage:** Implemented client-side rendering (CSR) with Local Storage to manage and display blog posts dynamically.
